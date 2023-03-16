@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke.git",
+      "state" : {
+        "revision" : "6241e100294a2aa70d1811641585ab7da780bd0f",
+        "version" : "12.0.0"
+      }
+    },
+    {
+      "identity" : "togglablesecurefield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/perfaram/TogglableSecureField.git",
+      "state" : {
+        "revision" : "9c9dd3c4e74756b6bbf56cb2dc30307e118468d9",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
