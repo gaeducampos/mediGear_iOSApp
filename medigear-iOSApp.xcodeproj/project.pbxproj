@@ -16,6 +16,9 @@
 		4B6E5EAB29BFD5FE00A3B26F /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6E5EAA29BFD5FE00A3B26F /* Nuke */; };
 		4B83547129BFDA5F006FC02A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4B83547029BFDA5F006FC02A /* NukeUI */; };
 		4B83547429BFED75006FC02A /* TogglableSecureField in Frameworks */ = {isa = PBXBuildFile; productRef = 4B83547329BFED75006FC02A /* TogglableSecureField */; };
+		4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543829C36B81003CB934 /* UserLogin.swift */; };
+		4B8F543B29C36C22003CB934 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543A29C36C22003CB934 /* SignInService.swift */; };
+		4B8F543F29C3B294003CB934 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543E29C3B294003CB934 /* LogInViewModel.swift */; };
 		4BC6349C29B9321E0046C2E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6349B29B9321E0046C2E0 /* AppDelegate.swift */; };
 		4BC6349E29B9321E0046C2E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6349D29B9321E0046C2E0 /* SceneDelegate.swift */; };
 		4BC634A029B9321E0046C2E0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6349F29B9321E0046C2E0 /* SignInViewController.swift */; };
@@ -26,6 +29,9 @@
 		4BC634C629B96D4B0046C2E0 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC634C529B96D4B0046C2E0 /* SignUpService.swift */; };
 		4BC634C829B96E830046C2E0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC634C729B96E830046C2E0 /* Session.swift */; };
 		4BC634CA29B96EAA0046C2E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC634C929B96EAA0046C2E0 /* User.swift */; };
+		4BDBCFA229CA6B8100293D8B /* Navajo-Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 4BDBCFA129CA6B8100293D8B /* Navajo-Swift */; };
+		4BDBCFA429CA82F200293D8B /* SecureCustomTexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBCFA329CA82F200293D8B /* SecureCustomTexField.swift */; };
+		4BE2642029CBA13F004D7290 /* EmailValidExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE2641F29CBA13F004D7290 /* EmailValidExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,9 @@
 		4B211EC629C2287200B59F7D /* CustomMediGearButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMediGearButtonStyle.swift; sourceTree = "<group>"; };
 		4B211EC929C2656C00B59F7D /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
 		4B6E5EA429BF8EAD00A3B26F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4B8F543829C36B81003CB934 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
+		4B8F543A29C36C22003CB934 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
+		4B8F543E29C3B294003CB934 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		4BC6349829B9321E0046C2E0 /* medigear-iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "medigear-iOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC6349B29B9321E0046C2E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BC6349D29B9321E0046C2E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +56,8 @@
 		4BC634C529B96D4B0046C2E0 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		4BC634C729B96E830046C2E0 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4BC634C929B96EAA0046C2E0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4BDBCFA329CA82F200293D8B /* SecureCustomTexField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureCustomTexField.swift; sourceTree = "<group>"; };
+		4BE2641F29CBA13F004D7290 /* EmailValidExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B83547429BFED75006FC02A /* TogglableSecureField in Frameworks */,
+				4BDBCFA229CA6B8100293D8B /* Navajo-Swift in Frameworks */,
 				4B6E5EAB29BFD5FE00A3B26F /* Nuke in Frameworks */,
 				4B83547129BFDA5F006FC02A /* NukeUI in Frameworks */,
 			);
@@ -63,12 +75,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B211EC829C2630C00B59F7D /* ViewModels */ = {
+		4B211EC829C2630C00B59F7D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				4B211EC929C2656C00B59F7D /* RegisterUserViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4B211ECB29C2909000B59F7D /* CustomStyles */ = {
@@ -79,17 +91,22 @@
 			path = CustomStyles;
 			sourceTree = "<group>";
 		};
-		4B211ECC29C290EE00B59F7D /* ReusableComponents */ = {
+		4B211ECC29C290EE00B59F7D /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				4B211EC429C2263300B59F7D /* FormTextField.swift */,
+				4BDBCFA329CA82F200293D8B /* SecureCustomTexField.swift */,
 			);
-			path = ReusableComponents;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4B211ECD29C2910600B59F7D /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				4B8F543329C3657A003CB934 /* Model */,
+				4B8F543529C3671E003CB934 /* ViewModel */,
+				4B8F543729C3675C003CB934 /* ViewController */,
+				4B8F543429C36715003CB934 /* View */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -99,6 +116,57 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B8F543329C3657A003CB934 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B8F543829C36B81003CB934 /* UserLogin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B8F543429C36715003CB934 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B21028229BA136400E18DF1 /* SignIn.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B8F543529C3671E003CB934 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B8F543E29C3B294003CB934 /* LogInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B8F543729C3675C003CB934 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4BC6349F29B9321E0046C2E0 /* SignInViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4B8F543C29C3B1A7003CB934 /* SignIn_SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				4B8F543D29C3B1D9003CB934 /* AuthAPIResponse */,
+				4BC634B729B935FF0046C2E0 /* Register */,
+				4B211ECD29C2910600B59F7D /* LogIn */,
+			);
+			path = SignIn_SignUp;
+			sourceTree = "<group>";
+		};
+		4B8F543D29C3B1D9003CB934 /* AuthAPIResponse */ = {
+			isa = PBXGroup;
+			children = (
+				4BC634C729B96E830046C2E0 /* Session.swift */,
+				4BC634C929B96EAA0046C2E0 /* User.swift */,
+			);
+			path = AuthAPIResponse;
 			sourceTree = "<group>";
 		};
 		4BC6348F29B9321E0046C2E0 = {
@@ -126,7 +194,7 @@
 				4BC634A629B932200046C2E0 /* LaunchScreen.storyboard */,
 				4BC634A429B932200046C2E0 /* Assets.xcassets */,
 				4BC634A929B932200046C2E0 /* Info.plist */,
-				4B211ECC29C290EE00B59F7D /* ReusableComponents */,
+				4B211ECC29C290EE00B59F7D /* Components */,
 				4B211ECB29C2909000B59F7D /* CustomStyles */,
 				4BC634B629B935F30046C2E0 /* Features */,
 				4BC634B229B935000046C2E0 /* Extensions */,
@@ -137,37 +205,34 @@
 			path = "medigear-iOSApp";
 			sourceTree = "<group>";
 		};
-		4BC634AF29B934EB0046C2E0 /* ViewControllers */ = {
+		4BC634AF29B934EB0046C2E0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4BC6349F29B9321E0046C2E0 /* SignInViewController.swift */,
 				4B6E5EA429BF8EAD00A3B26F /* SignUpViewController.swift */,
 			);
-			path = ViewControllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		4BC634B029B934F40046C2E0 /* Models */ = {
+		4BC634B029B934F40046C2E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				4BC634B829B937350046C2E0 /* UserRegister.swift */,
-				4BC634C729B96E830046C2E0 /* Session.swift */,
-				4BC634C929B96EAA0046C2E0 /* User.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		4BC634B129B934FA0046C2E0 /* Views */ = {
+		4BC634B129B934FA0046C2E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B21028229BA136400E18DF1 /* SignIn.swift */,
 				4B211EC229C21F8600B59F7D /* SignUp.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		4BC634B229B935000046C2E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4BE2641F29CBA13F004D7290 /* EmailValidExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				4BC634C529B96D4B0046C2E0 /* SignUpService.swift */,
+				4B8F543A29C36C22003CB934 /* SignInService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,8 +264,7 @@
 		4BC634B629B935F30046C2E0 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				4B211ECD29C2910600B59F7D /* LogIn */,
-				4BC634B729B935FF0046C2E0 /* Register */,
+				4B8F543C29C3B1A7003CB934 /* SignIn_SignUp */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -207,10 +272,10 @@
 		4BC634B729B935FF0046C2E0 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				4BC634B029B934F40046C2E0 /* Models */,
-				4BC634B129B934FA0046C2E0 /* Views */,
-				4B211EC829C2630C00B59F7D /* ViewModels */,
-				4BC634AF29B934EB0046C2E0 /* ViewControllers */,
+				4BC634B029B934F40046C2E0 /* Model */,
+				4BC634B129B934FA0046C2E0 /* View */,
+				4B211EC829C2630C00B59F7D /* ViewModel */,
+				4BC634AF29B934EB0046C2E0 /* ViewController */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -235,6 +300,7 @@
 				4B6E5EAA29BFD5FE00A3B26F /* Nuke */,
 				4B83547029BFDA5F006FC02A /* NukeUI */,
 				4B83547329BFED75006FC02A /* TogglableSecureField */,
+				4BDBCFA129CA6B8100293D8B /* Navajo-Swift */,
 			);
 			productName = "medigear-iOSApp";
 			productReference = 4BC6349829B9321E0046C2E0 /* medigear-iOSApp.app */;
@@ -267,6 +333,7 @@
 			packageReferences = (
 				4B6E5EA629BFC84900A3B26F /* XCRemoteSwiftPackageReference "Nuke" */,
 				4B83547229BFED75006FC02A /* XCRemoteSwiftPackageReference "TogglableSecureField" */,
+				4BDBCFA029CA6B8100293D8B /* XCRemoteSwiftPackageReference "Navajo-Swift" */,
 			);
 			productRefGroup = 4BC6349929B9321E0046C2E0 /* Products */;
 			projectDirPath = "";
@@ -294,20 +361,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */,
 				4B211EC729C2287200B59F7D /* CustomMediGearButtonStyle.swift in Sources */,
 				4BC634C829B96E830046C2E0 /* Session.swift in Sources */,
 				4B211ECA29C2656C00B59F7D /* RegisterUserViewModel.swift in Sources */,
 				4BC634A029B9321E0046C2E0 /* SignInViewController.swift in Sources */,
 				4BC634C629B96D4B0046C2E0 /* SignUpService.swift in Sources */,
 				4B211EC329C21F8600B59F7D /* SignUp.swift in Sources */,
+				4B8F543B29C36C22003CB934 /* SignInService.swift in Sources */,
 				4BC6349C29B9321E0046C2E0 /* AppDelegate.swift in Sources */,
 				4B6E5EA529BF8EAD00A3B26F /* SignUpViewController.swift in Sources */,
+				4BE2642029CBA13F004D7290 /* EmailValidExtension.swift in Sources */,
+				4BDBCFA429CA82F200293D8B /* SecureCustomTexField.swift in Sources */,
 				4BC634CA29B96EAA0046C2E0 /* User.swift in Sources */,
 				4B211EC529C2263300B59F7D /* FormTextField.swift in Sources */,
 				4BC6349E29B9321E0046C2E0 /* SceneDelegate.swift in Sources */,
 				4BC634B929B937350046C2E0 /* UserRegister.swift in Sources */,
 				4B21028329BA136400E18DF1 /* SignIn.swift in Sources */,
 				4BC634C429B957CB0046C2E0 /* NetworkProvider.swift in Sources */,
+				4B8F543F29C3B294003CB934 /* LogInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +603,14 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		4BDBCFA029CA6B8100293D8B /* XCRemoteSwiftPackageReference "Navajo-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Wistas23/Navajo-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -548,6 +628,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4B83547229BFED75006FC02A /* XCRemoteSwiftPackageReference "TogglableSecureField" */;
 			productName = TogglableSecureField;
+		};
+		4BDBCFA129CA6B8100293D8B /* Navajo-Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BDBCFA029CA6B8100293D8B /* XCRemoteSwiftPackageReference "Navajo-Swift" */;
+			productName = "Navajo-Swift";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

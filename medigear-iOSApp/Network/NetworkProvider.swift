@@ -76,14 +76,12 @@ class NetworkProvider {
     ) throws -> Data {
         guard let response = output.response as? HTTPURLResponse,
               response.statusCode >= 200 && response.statusCode < 300 else {
-            print(output.response)
             throw NetworkingError.badURLResponse(url: request.url?.absoluteString ?? "")
-                  
-            
         }
-        
         return output.data
     }
+    
+    
     
     func handleCompletion(completion: Subscribers.Completion<Error>) {
         switch completion {
@@ -99,7 +97,6 @@ extension URLRequest {
     static var baseRequest: URLRequest {
         var request = URLRequest(url: NetworkProvider.Constants.baseURL)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(NetworkProvider.BearerToken)", forHTTPHeaderField: "Authorization")
         return request
     }
     
