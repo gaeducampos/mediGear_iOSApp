@@ -28,6 +28,8 @@ class RegisterUserViewModel: ObservableObject {
     @Published var confirmedPassword = ""
     @Published var isValid = false
     
+    @Published var showAlert = false
+    
     @Published var userSession: Session?
     
     var usernameMessage = ""
@@ -182,15 +184,20 @@ class RegisterUserViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
     
+    
     func registerUser(user: UserRegister) {
         registerCancellable =
         service
             .registerUser(user: user)
-            .sink(receiveCompletion: { _ in },
-                  receiveValue: { [weak self] response in
-                self?.userSession = response
-                print(response)
-            })
+            .toResult()
+            .sink { [weak self] result in
+                switch result {
+                case .success(let user):
+                    self?.userSession = user
+                case .failure(let error):
+                    self?.showAlert = true
+                }
+            }
     }
     
     

@@ -12,6 +12,9 @@ import Combine
 class SignUpService {
     private let networkProvider: NetworkProvider
     
+
+    
+    
     init(networkProvider: NetworkProvider) {
         self.networkProvider = networkProvider
     }
@@ -29,4 +32,16 @@ class SignUpService {
         
     }
     
+}
+
+extension Publisher where Failure: Error {
+    func toResult() -> AnyPublisher<Result<Output, Failure>, Never> {
+        map {
+            Result.success($0)
+        }
+        .catch {
+            Just(Result.failure($0))
+        }
+        .eraseToAnyPublisher()
+    }
 }

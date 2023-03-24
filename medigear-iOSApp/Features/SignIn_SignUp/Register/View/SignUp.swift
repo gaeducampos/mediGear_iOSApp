@@ -11,7 +11,6 @@ import TogglableSecureField
 
 struct SignUp: View {
     @StateObject var viewModel: RegisterUserViewModel
-    @State private var showingAlert = false
     
     
     init(service: SignUpService) {
@@ -52,13 +51,18 @@ struct SignUp: View {
                                                               password: viewModel.password,
                                                               username: viewModel.username,
                                                               fullName: viewModel.fullName))
+        
+                
+                    
                 }) {
                     Text("Crear Cuenta")
                         .frame(maxWidth: .infinity, minHeight: 50)
-
+                
                 }
-                .disabled(viewModel.isValid)
                 .buttonStyle(MediGearButtonStyle(isEnable: viewModel.isValid))
+                .alert("El usuario ya existe o Email ya existe", isPresented: $viewModel.showAlert) {
+                    Button("Ok", role: .cancel) {}
+                }
                 
             }
             .padding(.all)

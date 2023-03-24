@@ -12,6 +12,7 @@
 		4B211EC529C2263300B59F7D /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC429C2263300B59F7D /* FormTextField.swift */; };
 		4B211EC729C2287200B59F7D /* CustomMediGearButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC629C2287200B59F7D /* CustomMediGearButtonStyle.swift */; };
 		4B211ECA29C2656C00B59F7D /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC929C2656C00B59F7D /* RegisterUserViewModel.swift */; };
+		4B23F40129CD04F50088DCE6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23F40029CD04F50088DCE6 /* ErrorResponse.swift */; };
 		4B6E5EA529BF8EAD00A3B26F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E5EA429BF8EAD00A3B26F /* SignUpViewController.swift */; };
 		4B6E5EAB29BFD5FE00A3B26F /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6E5EAA29BFD5FE00A3B26F /* Nuke */; };
 		4B83547129BFDA5F006FC02A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4B83547029BFDA5F006FC02A /* NukeUI */; };
@@ -40,6 +41,7 @@
 		4B211EC429C2263300B59F7D /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		4B211EC629C2287200B59F7D /* CustomMediGearButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMediGearButtonStyle.swift; sourceTree = "<group>"; };
 		4B211EC929C2656C00B59F7D /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
+		4B23F40029CD04F50088DCE6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		4B6E5EA429BF8EAD00A3B26F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4B8F543829C36B81003CB934 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		4B8F543A29C36C22003CB934 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				4BC634C729B96E830046C2E0 /* Session.swift */,
 				4BC634C929B96EAA0046C2E0 /* User.swift */,
+				4B23F40029CD04F50088DCE6 /* ErrorResponse.swift */,
 			);
 			path = AuthAPIResponse;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B23F40129CD04F50088DCE6 /* ErrorResponse.swift in Sources */,
 				4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */,
 				4B211EC729C2287200B59F7D /* CustomMediGearButtonStyle.swift in Sources */,
 				4BC634C829B96E830046C2E0 /* Session.swift in Sources */,
