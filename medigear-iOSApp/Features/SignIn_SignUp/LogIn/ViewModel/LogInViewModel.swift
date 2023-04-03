@@ -13,6 +13,9 @@ class LogInViewModel: ObservableObject {
     private let service: SignInService
     
     
+    @Published var presentNotUserValidAlert = false
+    
+    
     let loggedIn = PassthroughSubject<Void, Never>()
     @Published var sessionResponse: Session?
     
@@ -21,15 +24,22 @@ class LogInViewModel: ObservableObject {
         self.service = service
     }
     
+
+    
     func logInUser(user: UserLogin) {
         logInCancellable = service
             .logInUser(user: user)
-            .sink(receiveCompletion: { _ in},
-                  receiveValue: {[weak self] response in
-                self?.loggedIn.send()
-               // self?.sessionResponse = response
-                // save response to user defaults
-            })
+            .toResult()
+            .sink { [weak self] result in
+                switch result {
+                case .success(let user):
+                    self?.sessionResponse = user
+                    // Store To user Defaults
+                    self?.loggedIn.send()
+                case .failure(_):
+                    self?.presentNotUserValidAlert = true
+                }
+            }
     }
     
 }

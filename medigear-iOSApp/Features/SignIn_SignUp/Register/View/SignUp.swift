@@ -10,14 +10,10 @@ import NukeUI
 import TogglableSecureField
 
 struct SignUp: View {
-    @StateObject var viewModel: RegisterUserViewModel
+    @ObservedObject var viewModel: RegisterUserViewModel
     
     
-    init(service: SignUpService) {
-        _viewModel = StateObject(wrappedValue: RegisterUserViewModel(service: service))
-    }
-    
-    let mediGearImageLogoURL = "http://localhost:1337/uploads/Screenshot_2023_03_09_at_7_23_58_AM_aa9264b53e.png?updated_at=2023-03-09T13:24:22.963Z"
+    let mediGearImageLogoURL = "\(NetworkProvider.Constants.baseLocalHost)/uploads/Screenshot_2023_03_09_at_7_23_58_AM_aa9264b53e.png?updated_at=2023-03-09T13:24:22.963Z"
     
     var body: some View {
         VStack(spacing: 25) {
@@ -59,8 +55,9 @@ struct SignUp: View {
                         .frame(maxWidth: .infinity, minHeight: 50)
                 
                 }
+                .disabled(viewModel.isValid == false)
                 .buttonStyle(MediGearButtonStyle(isEnable: viewModel.isValid))
-                .alert("El usuario ya existe o Email ya existe", isPresented: $viewModel.showAlert) {
+                .alert("El usuario ya existe o Email ya existe", isPresented: $viewModel.userInvalidAlert) {
                     Button("Ok", role: .cancel) {}
                 }
                 
@@ -73,6 +70,6 @@ struct SignUp: View {
 
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp(service: SignUpService(networkProvider: .init()))
+        SignUp(viewModel: .init(service: .init(networkProvider: .init())))
     }
 }

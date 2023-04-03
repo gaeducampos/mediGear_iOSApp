@@ -17,6 +17,8 @@ class RegisterUserViewModel: ObservableObject {
         case notStrongEnough
     }
     
+    var loggedIn = PassthroughSubject<Void, Never>()
+    
     var registerCancellable: AnyCancellable?
     var cancellableSet = Set<AnyCancellable>()
     private let service: SignUpService
@@ -27,10 +29,9 @@ class RegisterUserViewModel: ObservableObject {
     @Published var password = ""
     @Published var confirmedPassword = ""
     @Published var isValid = false
+    @Published var userInvalidAlert = false
     
-    @Published var showAlert = false
-    
-    @Published var userSession: Session?
+    var userSession: Session?
     
     var usernameMessage = ""
     var fullNameMessage = ""
@@ -194,8 +195,10 @@ class RegisterUserViewModel: ObservableObject {
                 switch result {
                 case .success(let user):
                     self?.userSession = user
-                case .failure(let error):
-                    self?.showAlert = true
+                    self?.loggedIn.send()
+                    // Store To userDefaults
+                case .failure(_):
+                    self?.userInvalidAlert = true
                 }
             }
     }

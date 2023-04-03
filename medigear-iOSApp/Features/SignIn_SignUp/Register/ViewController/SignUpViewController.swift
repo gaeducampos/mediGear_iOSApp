@@ -7,11 +7,14 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class SignUpViewController: UIViewController {
+    private let viewModel = RegisterUserViewModel(service: .init(networkProvider: .init()))
+    private var cancellables = Set<AnyCancellable>()
     
     lazy var signUp: UIHostingController = {
-        let signUpView = UIHostingController(rootView: SignUp(service: .init(networkProvider: .init())))
+        let signUpView = UIHostingController(rootView: SignUp(viewModel: .init(service: .init(networkProvider: .init()))))
         signUpView.view.translatesAutoresizingMaskIntoConstraints = false
         signUpView.view.backgroundColor = .systemBackground
         signUpView.overrideUserInterfaceStyle = .light
@@ -38,15 +41,16 @@ class SignUpViewController: UIViewController {
         ])
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func userLoggedIn() {
+        viewModel
+            .loggedIn
+            .sink {
+                self.navigationController?.setViewControllers([ProductTabBarController()], animated: true)
+            }
+            .store(in: &cancellables)
+            
+        
     }
-    */
+
 
 }

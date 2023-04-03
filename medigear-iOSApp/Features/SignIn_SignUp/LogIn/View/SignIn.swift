@@ -16,8 +16,11 @@ struct SignIn: View {
     @State private var email  = ""
     @State private var password = ""
     @State private var isPasswordVisible = false
+    @State private var presentEmailInvalidAlert = false
+    @State private var presentFildsRequiredAledt = false
+    
     var presentSignUpViewController: () -> Void
-    var mediGearImageURL = "http://localhost:1337/uploads/Screenshot_2023_03_09_at_7_23_58_AM_aa9264b53e.png?updated_at=2023-03-09T13:24:22.963Z"
+    var mediGearImageURL = "\(NetworkProvider.Constants.baseLocalHost)/uploads/Screenshot_2023_03_09_at_7_23_58_AM_aa9264b53e.png?updated_at=2023-03-09T13:24:22.963Z"
     
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
@@ -28,7 +31,7 @@ struct SignIn: View {
             }
             .frame(width: 200, height: 50)
                 
-            Text("Ingresar")
+            Text("- Ingresar -")
             VStack(spacing: 20) {
                 
                 FormTextField(sectionText: "Email", notValidInput: "",
@@ -46,13 +49,31 @@ struct SignIn: View {
                 }
                 
                 Button(action: {
-                    viewModel.logInUser(user: UserLogin(identifier: email, password: password))
+                    if email.isEmpty, password.isEmpty {
+                        presentFildsRequiredAledt = true
+                    }
+                    else if !email.isValidEmail() {
+                        presentEmailInvalidAlert = true
+                    } else {
+                        viewModel.logInUser(user: UserLogin(identifier: email, password: password))
+                    }
+                    
                 }) {
                     Text("Iniciar Sesión")
                     .frame(maxWidth: .infinity, minHeight: 50)
                     
+                    
                 }
-                .buttonStyle(MediGearButtonStyle(isEnable: false))
+                .buttonStyle(MediGearButtonStyle(isEnable: true))
+                .alert("Los campos son Obligatorios", isPresented: $presentFildsRequiredAledt) {
+                    Button("Ok", role: .cancel) {}
+                }
+                .alert("Email no tiene formato valido", isPresented: $presentEmailInvalidAlert) {
+                    Button("OK", role: .cancel) {}
+                }
+                .alert("Usuario/Contraseña no valido", isPresented: $viewModel.presentNotUserValidAlert) {
+                    Button("OK", role: .cancel) {}
+                }
                 
                 
                 Button(action: {

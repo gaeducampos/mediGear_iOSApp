@@ -13,6 +13,7 @@ class SignInViewController: UIViewController {
     private let viewModel = LogInViewModel(
             service: .init(networkProvider: .init())
         )
+    
     lazy var signIn: UIHostingController = {
         let signInView = UIHostingController(
             rootView: SignIn(
@@ -37,6 +38,7 @@ class SignInViewController: UIViewController {
         addChild(signIn)
         view.addSubview(signIn.view)
         setUpConstraints()
+        loggedIn()
     }
     
     
@@ -58,7 +60,10 @@ class SignInViewController: UIViewController {
             viewModel
             .loggedIn
             .sink {
-                // PUSH 
+            
+                self.navigationController?.pushViewController(
+                    ProductTabBarController(),
+                    animated: true)
             }
             .store(in: &cancellables)
     }

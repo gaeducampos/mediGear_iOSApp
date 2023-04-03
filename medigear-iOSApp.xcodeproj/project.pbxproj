@@ -13,8 +13,14 @@
 		4B211EC729C2287200B59F7D /* CustomMediGearButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC629C2287200B59F7D /* CustomMediGearButtonStyle.swift */; };
 		4B211ECA29C2656C00B59F7D /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC929C2656C00B59F7D /* RegisterUserViewModel.swift */; };
 		4B23F40129CD04F50088DCE6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23F40029CD04F50088DCE6 /* ErrorResponse.swift */; };
+		4B4224AD29D25056009A2CF4 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4224AC29D25056009A2CF4 /* OrderViewController.swift */; };
+		4B4224B129D25162009A2CF4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4224B029D25162009A2CF4 /* ProfileViewController.swift */; };
 		4B6E5EA529BF8EAD00A3B26F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E5EA429BF8EAD00A3B26F /* SignUpViewController.swift */; };
 		4B6E5EAB29BFD5FE00A3B26F /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6E5EAA29BFD5FE00A3B26F /* Nuke */; };
+		4B79ED1829D4951000FF97C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ED1729D4951000FF97C9 /* ColorExtension.swift */; };
+		4B79ED1A29D4A69800FF97C9 /* MedicalMinistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ED1929D4A69800FF97C9 /* MedicalMinistration.swift */; };
+		4B8120E929D20B460087E78F /* ProductTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8120E829D20B460087E78F /* ProductTabBarController.swift */; };
+		4B8120F029D2386A0087E78F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8120EF29D2386A0087E78F /* HomeViewController.swift */; };
 		4B83547129BFDA5F006FC02A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4B83547029BFDA5F006FC02A /* NukeUI */; };
 		4B83547429BFED75006FC02A /* TogglableSecureField in Frameworks */ = {isa = PBXBuildFile; productRef = 4B83547329BFED75006FC02A /* TogglableSecureField */; };
 		4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543829C36B81003CB934 /* UserLogin.swift */; };
@@ -32,7 +38,13 @@
 		4BC634CA29B96EAA0046C2E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC634C929B96EAA0046C2E0 /* User.swift */; };
 		4BDBCFA229CA6B8100293D8B /* Navajo-Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 4BDBCFA129CA6B8100293D8B /* Navajo-Swift */; };
 		4BDBCFA429CA82F200293D8B /* SecureCustomTexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBCFA329CA82F200293D8B /* SecureCustomTexField.swift */; };
+		4BE18AFC29D7894400D5B24C /* MedicalSubcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE18AFB29D7894400D5B24C /* MedicalSubcategory.swift */; };
 		4BE2642029CBA13F004D7290 /* EmailValidExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE2641F29CBA13F004D7290 /* EmailValidExtension.swift */; };
+		4BF5946529D39AD40095BDE4 /* MedicalMinistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5946429D39AD40095BDE4 /* MedicalMinistrationService.swift */; };
+		4BF5946729D39E200095BDE4 /* PublisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5946629D39E200095BDE4 /* PublisherExtension.swift */; };
+		4BF5946929D39E840095BDE4 /* MedicalMinistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5946829D39E840095BDE4 /* MedicalMinistrationViewModel.swift */; };
+		4BF5946C29D3A1A60095BDE4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5946B29D3A1A60095BDE4 /* HomeView.swift */; };
+		4BF5946E29D3A87D0095BDE4 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5946D29D3A87D0095BDE4 /* APIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +54,13 @@
 		4B211EC629C2287200B59F7D /* CustomMediGearButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMediGearButtonStyle.swift; sourceTree = "<group>"; };
 		4B211EC929C2656C00B59F7D /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
 		4B23F40029CD04F50088DCE6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		4B4224AC29D25056009A2CF4 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		4B4224B029D25162009A2CF4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4B6E5EA429BF8EAD00A3B26F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4B79ED1729D4951000FF97C9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		4B79ED1929D4A69800FF97C9 /* MedicalMinistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalMinistration.swift; sourceTree = "<group>"; };
+		4B8120E829D20B460087E78F /* ProductTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTabBarController.swift; sourceTree = "<group>"; };
+		4B8120EF29D2386A0087E78F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4B8F543829C36B81003CB934 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		4B8F543A29C36C22003CB934 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		4B8F543E29C3B294003CB934 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
@@ -59,7 +77,13 @@
 		4BC634C729B96E830046C2E0 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4BC634C929B96EAA0046C2E0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4BDBCFA329CA82F200293D8B /* SecureCustomTexField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureCustomTexField.swift; sourceTree = "<group>"; };
+		4BE18AFB29D7894400D5B24C /* MedicalSubcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalSubcategory.swift; sourceTree = "<group>"; };
 		4BE2641F29CBA13F004D7290 /* EmailValidExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidExtension.swift; sourceTree = "<group>"; };
+		4BF5946429D39AD40095BDE4 /* MedicalMinistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalMinistrationService.swift; sourceTree = "<group>"; };
+		4BF5946629D39E200095BDE4 /* PublisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExtension.swift; sourceTree = "<group>"; };
+		4BF5946829D39E840095BDE4 /* MedicalMinistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalMinistrationViewModel.swift; sourceTree = "<group>"; };
+		4BF5946B29D3A1A60095BDE4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4BF5946D29D3A87D0095BDE4 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +137,63 @@
 			path = LogIn;
 			sourceTree = "<group>";
 		};
+		4B4224AA29D2502A009A2CF4 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				4B4224AB29D25040009A2CF4 /* ViewController */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		4B4224AB29D25040009A2CF4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B4224AC29D25056009A2CF4 /* OrderViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4B4224AE29D25130009A2CF4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4B4224AF29D25153009A2CF4 /* ViewController */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4B4224AF29D25153009A2CF4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B4224B029D25162009A2CF4 /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		4B6E5EA929BFD57B00A3B26F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B8120E029D1F5810087E78F /* ProductTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4B8120E829D20B460087E78F /* ProductTabBarController.swift */,
+				4B8120EA29D20B5B0087E78F /* Home */,
+				4B4224AA29D2502A009A2CF4 /* Orders */,
+				4B4224AE29D25130009A2CF4 /* Profile */,
+			);
+			path = ProductTabBar;
+			sourceTree = "<group>";
+		};
+		4B8120EA29D20B5B0087E78F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4B8120EF29D2386A0087E78F /* HomeViewController.swift */,
+				4BF5945F29D399600095BDE4 /* HomeView */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		4B8F543329C3657A003CB934 /* Model */ = {
@@ -236,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				4BE2641F29CBA13F004D7290 /* EmailValidExtension.swift */,
+				4BF5946629D39E200095BDE4 /* PublisherExtension.swift */,
+				4B79ED1729D4951000FF97C9 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -253,6 +331,7 @@
 			children = (
 				4BC634C529B96D4B0046C2E0 /* SignUpService.swift */,
 				4B8F543A29C36C22003CB934 /* SignInService.swift */,
+				4BF5946429D39AD40095BDE4 /* MedicalMinistrationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -267,7 +346,9 @@
 		4BC634B629B935F30046C2E0 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4B8120E029D1F5810087E78F /* ProductTabBar */,
 				4B8F543C29C3B1A7003CB934 /* SignIn_SignUp */,
+				4BF5946D29D3A87D0095BDE4 /* APIResponse.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -281,6 +362,41 @@
 				4BC634AF29B934EB0046C2E0 /* ViewController */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		4BF5945F29D399600095BDE4 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5946A29D3A1690095BDE4 /* View */,
+				4BF5946329D39A600095BDE4 /* ViewModel */,
+				4BF5946029D3997E0095BDE4 /* Model */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		4BF5946029D3997E0095BDE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B79ED1929D4A69800FF97C9 /* MedicalMinistration.swift */,
+				4BE18AFB29D7894400D5B24C /* MedicalSubcategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BF5946329D39A600095BDE4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5946829D39E840095BDE4 /* MedicalMinistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BF5946A29D3A1690095BDE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5946B29D3A1A60095BDE4 /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,23 +481,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B23F40129CD04F50088DCE6 /* ErrorResponse.swift in Sources */,
+				4BF5946529D39AD40095BDE4 /* MedicalMinistrationService.swift in Sources */,
+				4BF5946929D39E840095BDE4 /* MedicalMinistrationViewModel.swift in Sources */,
 				4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */,
+				4B79ED1A29D4A69800FF97C9 /* MedicalMinistration.swift in Sources */,
 				4B211EC729C2287200B59F7D /* CustomMediGearButtonStyle.swift in Sources */,
 				4BC634C829B96E830046C2E0 /* Session.swift in Sources */,
 				4B211ECA29C2656C00B59F7D /* RegisterUserViewModel.swift in Sources */,
 				4BC634A029B9321E0046C2E0 /* SignInViewController.swift in Sources */,
+				4B4224B129D25162009A2CF4 /* ProfileViewController.swift in Sources */,
+				4BE18AFC29D7894400D5B24C /* MedicalSubcategory.swift in Sources */,
 				4BC634C629B96D4B0046C2E0 /* SignUpService.swift in Sources */,
+				4B8120F029D2386A0087E78F /* HomeViewController.swift in Sources */,
 				4B211EC329C21F8600B59F7D /* SignUp.swift in Sources */,
 				4B8F543B29C36C22003CB934 /* SignInService.swift in Sources */,
 				4BC6349C29B9321E0046C2E0 /* AppDelegate.swift in Sources */,
 				4B6E5EA529BF8EAD00A3B26F /* SignUpViewController.swift in Sources */,
 				4BE2642029CBA13F004D7290 /* EmailValidExtension.swift in Sources */,
+				4BF5946729D39E200095BDE4 /* PublisherExtension.swift in Sources */,
+				4BF5946C29D3A1A60095BDE4 /* HomeView.swift in Sources */,
 				4BDBCFA429CA82F200293D8B /* SecureCustomTexField.swift in Sources */,
 				4BC634CA29B96EAA0046C2E0 /* User.swift in Sources */,
 				4B211EC529C2263300B59F7D /* FormTextField.swift in Sources */,
 				4BC6349E29B9321E0046C2E0 /* SceneDelegate.swift in Sources */,
+				4BF5946E29D3A87D0095BDE4 /* APIResponse.swift in Sources */,
+				4B79ED1829D4951000FF97C9 /* ColorExtension.swift in Sources */,
 				4BC634B929B937350046C2E0 /* UserRegister.swift in Sources */,
+				4B4224AD29D25056009A2CF4 /* OrderViewController.swift in Sources */,
 				4B21028329BA136400E18DF1 /* SignIn.swift in Sources */,
+				4B8120E929D20B460087E78F /* ProductTabBarController.swift in Sources */,
 				4BC634C429B957CB0046C2E0 /* NetworkProvider.swift in Sources */,
 				4B8F543F29C3B294003CB934 /* LogInViewModel.swift in Sources */,
 			);
