@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         // UINavigationController(rootViewController: SignInViewController())
-        window.rootViewController = ProductTabBarController()
+        window.rootViewController = MediGearTabBarController()
         window.makeKeyAndVisible()
         self.window = window
     }

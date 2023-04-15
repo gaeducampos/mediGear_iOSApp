@@ -13,9 +13,13 @@ class MedicalMinistrationViewModel: ObservableObject {
     private var medicalSpecialtyCancellable: AnyCancellable?
     private var medicalManufacturerCancellable: AnyCancellable?
     private var medicalMinistrationCancellable: AnyCancellable?
+    private var productsBySubCategoryCancellable: AnyCancellable?
+    
+    let pushToProductVC = PassthroughSubject<[Product]?, Never>()
     
     @Published var medicalSpecialties: [MedicalMinistration] = []
     @Published var medicalManufacturers: [MedicalMinistration] = []
+    @Published var productsBySubCategory: [Product] = []
     
     
     init(service: MedicalMinistrationService) {
@@ -50,4 +54,21 @@ class MedicalMinistrationViewModel: ObservableObject {
                 }
             }
     }
+    
+    
+    func getFilteredProductsBySubCategory(for subCategory: String) {
+        productsBySubCategoryCancellable = service
+            .getFilteredProductsBySubCategory(for: subCategory)
+            .toResult()
+            .sink { [weak self] result in
+                switch result {
+                case .success(let response):
+                    self?.productsBySubCategory = response.data
+                    self?.pushToProductVC.send(response.data)
+                case .failure(let error):
+                    print("Failure \(error)")
+                }
+            }
+    }
+    
 }

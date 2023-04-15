@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class LogInViewModel: ObservableObject {
+final class LogInViewModel: ObservableObject {
     var logInCancellable: AnyCancellable?
     private let service: SignInService
     

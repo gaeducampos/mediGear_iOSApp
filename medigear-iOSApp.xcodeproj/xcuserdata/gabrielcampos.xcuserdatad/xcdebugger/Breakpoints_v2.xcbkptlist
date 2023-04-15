@@ -3,4 +3,129 @@
    uuid = "B3318FDB-A604-4C1F-AC0B-E9FDF0BBB8AB"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1ED7CB45-D4E3-4613-BE98-995C70B658C4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medigear-iOSApp/Features/ProductTabBar/Home/SearchBar/ViewController/SearchResultController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "SearchResultController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1ED7CB45-D4E3-4613-BE98-995C70B658C4 - 90bc69bd5642657d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medigear_iOSApp.SearchResultController.init(viewModel: medigear_iOSApp.SearchBarViewModel) -&gt; medigear_iOSApp.SearchResultController"
+                  moduleName = "medigear-iOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielcampos/Developer/medigear-iOSApp/medigear-iOSApp/Features/ProductTabBar/Home/SearchBar/ViewController/SearchResultController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "1ED7CB45-D4E3-4613-BE98-995C70B658C4 - 25781dfb5bea0c75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medigear_iOSApp.SearchResultController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;medigear_iOSApp.SearchResultController&gt;"
+                  moduleName = "medigear-iOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielcampos/Developer/medigear-iOSApp/medigear-iOSApp/Features/ProductTabBar/Home/SearchBar/ViewController/SearchResultController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "1ED7CB45-D4E3-4613-BE98-995C70B658C4 - 189f3393f9881415"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medigear_iOSApp.SearchResultController.searchResultView.getter : SwiftUI.UIHostingController&lt;medigear_iOSApp.SearchResultView&gt;"
+                  moduleName = "medigear-iOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielcampos/Developer/medigear-iOSApp/medigear-iOSApp/Features/ProductTabBar/Home/SearchBar/ViewController/SearchResultController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "193">
+               </Location>
+               <Location
+                  uuid = "1ED7CB45-D4E3-4613-BE98-995C70B658C4 - 32ff4750da4b4fad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.UIHostingController&lt;medigear_iOSApp.SearchResultView&gt; in medigear_iOSApp.SearchResultController.searchResultView.getter : SwiftUI.UIHostingController&lt;medigear_iOSApp.SearchResultView&gt;"
+                  moduleName = "medigear-iOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielcampos/Developer/medigear-iOSApp/medigear-iOSApp/Features/ProductTabBar/Home/SearchBar/ViewController/SearchResultController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "1ED7CB45-D4E3-4613-BE98-995C70B658C4 - 2e4bf1c98ab19c19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medigear_iOSApp.SearchResultController.searchResultView.setter : SwiftUI.UIHostingController&lt;medigear_iOSApp.SearchResultView&gt;"
+                  moduleName = "medigear-iOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielcampos/Developer/medigear-iOSApp/medigear-iOSApp/Features/ProductTabBar/Home/SearchBar/ViewController/SearchResultController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "1ED7CB45-D4E3-4613-BE98-995C70B658C4 - 16a7642f9a26866a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medigear_iOSApp.SearchResultController.searchResultView.modify : SwiftUI.UIHostingController&lt;medigear_iOSApp.SearchResultView&gt;"
+                  moduleName = "medigear-iOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielcampos/Developer/medigear-iOSApp/medigear-iOSApp/Features/ProductTabBar/Home/SearchBar/ViewController/SearchResultController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "1ED7CB45-D4E3-4613-BE98-995C70B658C4 - 515dcba5fe2a576a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "medigear_iOSApp.SearchResultController.searchResultView.modify : SwiftUI.UIHostingController&lt;medigear_iOSApp.SearchResultView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "medigear-iOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielcampos/Developer/medigear-iOSApp/medigear-iOSApp/Features/ProductTabBar/Home/SearchBar/ViewController/SearchResultController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

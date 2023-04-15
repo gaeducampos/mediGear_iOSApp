@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class SignInService {
+final class SignInService {
     private let networkProvider: NetworkProvider
     
     @Published var sessionResponse: Session?

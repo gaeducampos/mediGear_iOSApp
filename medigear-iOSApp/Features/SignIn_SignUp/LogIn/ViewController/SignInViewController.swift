@@ -62,7 +62,7 @@ class SignInViewController: UIViewController {
             .sink {
             
                 self.navigationController?.pushViewController(
-                    ProductTabBarController(),
+                    MediGearTabBarController(),
                     animated: true)
             }
             .store(in: &cancellables)

@@ -19,6 +19,7 @@ struct MedicalMinistrationAttributes: Decodable {
     let publishedAt: String
     let img: String
     let name: String
+    let products: APIResponse<[Product]>?
     let sub_categories: APIResponse<[MedicalSubCategory]>?
     
     var subCategories: [MedicalSubCategory] {

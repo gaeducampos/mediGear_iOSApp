@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 
-class SignUpService {
+final class SignUpService {
     private let networkProvider: NetworkProvider
     
 

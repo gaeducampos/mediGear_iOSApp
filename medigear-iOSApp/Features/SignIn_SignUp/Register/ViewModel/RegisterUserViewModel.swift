@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Navajo_Swift
 
-class RegisterUserViewModel: ObservableObject {
+final class RegisterUserViewModel: ObservableObject {
     
     enum PasswordCheck {
         case valid

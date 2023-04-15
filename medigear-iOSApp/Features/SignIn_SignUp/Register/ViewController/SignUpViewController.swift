@@ -45,7 +45,7 @@ class SignUpViewController: UIViewController {
         viewModel
             .loggedIn
             .sink {
-                self.navigationController?.setViewControllers([ProductTabBarController()], animated: true)
+                self.navigationController?.setViewControllers([MediGearTabBarController()], animated: true)
             }
             .store(in: &cancellables)
             

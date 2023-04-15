@@ -8,7 +8,7 @@
 import SwiftUI
 import NukeUI
 
-struct HomeView: View {
+struct DashboardContentView: View {
     @ObservedObject var viewModel: MedicalMinistrationViewModel
     
     init(viewModel: MedicalMinistrationViewModel) {
@@ -28,6 +28,13 @@ struct HomeView: View {
                                 MedicalMinistrationStack(
                                     name: nil,
                                     image: item.attributes.img)
+                                .onTapGesture {
+                                    if let products = item.attributes.products {
+                                        viewModel.pushToProductVC.send(products.data)
+                                    } else {
+                                        viewModel.pushToProductVC.send(nil)
+                                    }
+                                }
                                 .frame(maxWidth: 350, maxHeight: 200)
                             }
                         }
@@ -48,6 +55,9 @@ struct HomeView: View {
                                             MedicalMinistrationStack(
                                                 name: category.attributes.name,
                                                 image: category.attributes.img)
+                                            .onTapGesture {
+                                                viewModel.getFilteredProductsBySubCategory(for: category.attributes.name)
+                                            }
                                             .frame(maxWidth: 350, maxHeight: 200)
                                         }
                                     }
@@ -96,8 +106,8 @@ struct MedicalMinistrationStack: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct  DashboardContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: .init(service: .init(netWorkProvider: .init())))
+        DashboardContentView(viewModel: .init(service: .init(netWorkProvider: .init())))
     }
 }

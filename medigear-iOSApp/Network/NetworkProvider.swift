@@ -22,7 +22,7 @@ struct NetworkStrapiError: Error,  LocalizedError {
     }
 }
 
-class NetworkProvider {
+final class NetworkProvider {
     static let BearerToken = "dfdea37a44142d2e50cca7bbe80a959a5b4724a5581942cb5c43515eb8a556367306c7ae748545ec55dc59a9f49a701b9f9a54333cf6f43471684b7d7e4ade57552290a18e7e666bf6925f9030cab50ea1e15fb6f7763e79719941e0826b8b6359734d5a967c80595b13bf45c4113a62708fe05d895a0fa224d9d896a12ba781"
     
     enum Constants {

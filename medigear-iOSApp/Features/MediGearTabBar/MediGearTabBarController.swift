@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductTabBarController: UITabBarController {
+class MediGearTabBarController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -20,7 +20,7 @@ class ProductTabBarController: UITabBarController {
         
         tabBar.backgroundColor  = .systemBackground
         
-        let homeViewController = HomeViewController()
+        let homeViewController = UINavigationController(rootViewController: HomeViewController())
         let orderViewController = OrderViewController()
         let profileViewController = ProfileViewController()
         
@@ -38,6 +38,7 @@ class ProductTabBarController: UITabBarController {
             image: UIImage(systemName: "person"),
             tag: 2)
         
+
        viewControllers = [homeViewController, orderViewController, profileViewController]
         
     }
