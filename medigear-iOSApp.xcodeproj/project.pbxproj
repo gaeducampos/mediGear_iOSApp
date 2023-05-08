@@ -9,18 +9,26 @@
 /* Begin PBXBuildFile section */
 		4B01018D29E7064200CE418A /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01018C29E7064200CE418A /* ProductListViewController.swift */; };
 		4B01018F29E7065500CE418A /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01018E29E7065500CE418A /* ProductListView.swift */; };
+		4B0BAA8229F75BC2005F943B /* APIPostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0BAA8129F75BC2005F943B /* APIPostData.swift */; };
 		4B21028329BA136400E18DF1 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21028229BA136400E18DF1 /* SignIn.swift */; };
 		4B211EC329C21F8600B59F7D /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC229C21F8600B59F7D /* SignUp.swift */; };
 		4B211EC529C2263300B59F7D /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC429C2263300B59F7D /* FormTextField.swift */; };
 		4B211EC729C2287200B59F7D /* CustomMediGearButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC629C2287200B59F7D /* CustomMediGearButtonStyle.swift */; };
 		4B211ECA29C2656C00B59F7D /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC929C2656C00B59F7D /* RegisterUserViewModel.swift */; };
 		4B23F40129CD04F50088DCE6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23F40029CD04F50088DCE6 /* ErrorResponse.swift */; };
+		4B2C758729F2F5740045680D /* CartViewIconsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C758629F2F5740045680D /* CartViewIconsController.swift */; };
+		4B2C758A29F2FBB80045680D /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C758929F2FBB80045680D /* PurchaseViewController.swift */; };
+		4B2C759029F2FF6D0045680D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C758F29F2FF6D0045680D /* CartView.swift */; };
 		4B34891029E46DEF00188216 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34890F29E46DEF00188216 /* SearchResultView.swift */; };
 		4B34891329E46EC200188216 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34891229E46EC200188216 /* Product.swift */; };
 		4B34891729E4706100188216 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34891629E4706100188216 /* ProductService.swift */; };
 		4B34891A29E4727D00188216 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34891929E4727D00188216 /* SearchBarViewModel.swift */; };
+		4B3D34A729F05CAD00D54DA5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D34A629F05CAD00D54DA5 /* Order.swift */; };
+		4B3D34A929F0861500D54DA5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D34A829F0861500D54DA5 /* CartViewModel.swift */; };
 		4B4224AD29D25056009A2CF4 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4224AC29D25056009A2CF4 /* OrderViewController.swift */; };
 		4B4224B129D25162009A2CF4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4224B029D25162009A2CF4 /* ProfileViewController.swift */; };
+		4B4E5DF729EDAAC000DF76ED /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E5DF629EDAAC000DF76ED /* CartService.swift */; };
+		4B4E5DF929EE06B600DF76ED /* ShortCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E5DF829EE06B600DF76ED /* ShortCodeGenerator.swift */; };
 		4B6E5EA529BF8EAD00A3B26F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E5EA429BF8EAD00A3B26F /* SignUpViewController.swift */; };
 		4B6E5EAB29BFD5FE00A3B26F /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6E5EAA29BFD5FE00A3B26F /* Nuke */; };
 		4B79ED1829D4951000FF97C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ED1729D4951000FF97C9 /* ColorExtension.swift */; };
@@ -33,6 +41,7 @@
 		4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543829C36B81003CB934 /* UserLogin.swift */; };
 		4B8F543B29C36C22003CB934 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543A29C36C22003CB934 /* SignInService.swift */; };
 		4B8F543F29C3B294003CB934 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543E29C3B294003CB934 /* LogInViewModel.swift */; };
+		4BA2D1FF29EAD7A3008032A6 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2D1FE29EAD7A3008032A6 /* Cart.swift */; };
 		4BC6349C29B9321E0046C2E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6349B29B9321E0046C2E0 /* AppDelegate.swift */; };
 		4BC6349E29B9321E0046C2E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6349D29B9321E0046C2E0 /* SceneDelegate.swift */; };
 		4BC634A029B9321E0046C2E0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6349F29B9321E0046C2E0 /* SignInViewController.swift */; };
@@ -60,18 +69,26 @@
 /* Begin PBXFileReference section */
 		4B01018C29E7064200CE418A /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		4B01018E29E7065500CE418A /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		4B0BAA8129F75BC2005F943B /* APIPostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPostData.swift; sourceTree = "<group>"; };
 		4B21028229BA136400E18DF1 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		4B211EC229C21F8600B59F7D /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		4B211EC429C2263300B59F7D /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		4B211EC629C2287200B59F7D /* CustomMediGearButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMediGearButtonStyle.swift; sourceTree = "<group>"; };
 		4B211EC929C2656C00B59F7D /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
 		4B23F40029CD04F50088DCE6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		4B2C758629F2F5740045680D /* CartViewIconsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewIconsController.swift; sourceTree = "<group>"; };
+		4B2C758929F2FBB80045680D /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		4B2C758F29F2FF6D0045680D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		4B34890F29E46DEF00188216 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		4B34891229E46EC200188216 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4B34891629E4706100188216 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		4B34891929E4727D00188216 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		4B3D34A629F05CAD00D54DA5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		4B3D34A829F0861500D54DA5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		4B4224AC29D25056009A2CF4 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		4B4224B029D25162009A2CF4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4B4E5DF629EDAAC000DF76ED /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
+		4B4E5DF829EE06B600DF76ED /* ShortCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCodeGenerator.swift; sourceTree = "<group>"; };
 		4B6E5EA429BF8EAD00A3B26F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4B79ED1729D4951000FF97C9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		4B79ED1929D4A69800FF97C9 /* MedicalMinistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalMinistration.swift; sourceTree = "<group>"; };
@@ -81,6 +98,7 @@
 		4B8F543829C36B81003CB934 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		4B8F543A29C36C22003CB934 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		4B8F543E29C3B294003CB934 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		4BA2D1FE29EAD7A3008032A6 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		4BC6349829B9321E0046C2E0 /* medigear-iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "medigear-iOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC6349B29B9321E0046C2E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BC6349D29B9321E0046C2E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,10 +204,18 @@
 			path = LogIn;
 			sourceTree = "<group>";
 		};
+		4B2C758829F2F5DA0045680D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B2C758629F2F5740045680D /* CartViewIconsController.swift */,
+				4B2C758929F2FBB80045680D /* PurchaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		4B34890029E468FA00188216 /* SearchBar */ = {
 			isa = PBXGroup;
 			children = (
-				4BA2D1F929EAD707008032A6 /* Cart */,
 				4B34891529E4701B00188216 /* ViewModel */,
 				4B34891429E46FEF00188216 /* ViewController */,
 				4B34890C29E46DB600188216 /* view */,
@@ -229,9 +255,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4B3D34A529F05B7100D54DA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B3D34A629F05CAD00D54DA5 /* Order.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4B4224AA29D2502A009A2CF4 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				4B3D34A529F05B7100D54DA5 /* Model */,
 				4B4224AB29D25040009A2CF4 /* ViewController */,
 			);
 			path = Orders;
@@ -284,6 +319,7 @@
 			children = (
 				4B8120EF29D2386A0087E78F /* HomeViewController.swift */,
 				4B34890029E468FA00188216 /* SearchBar */,
+				4BA2D1F929EAD707008032A6 /* Cart */,
 				4BF5945F29D399600095BDE4 /* Dashboard */,
 			);
 			path = Home;
@@ -344,8 +380,36 @@
 		4BA2D1F929EAD707008032A6 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				4B2C758829F2F5DA0045680D /* ViewController */,
+				4BA2D1FD29EAD792008032A6 /* Model */,
+				4BA2D1FB29EAD77E008032A6 /* ViewModel */,
+				4BA2D1FA29EAD777008032A6 /* View */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		4BA2D1FA29EAD777008032A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B2C758F29F2FF6D0045680D /* CartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BA2D1FB29EAD77E008032A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B3D34A829F0861500D54DA5 /* CartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BA2D1FD29EAD792008032A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BA2D1FE29EAD7A3008032A6 /* Cart.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4BC6348F29B9321E0046C2E0 = {
@@ -414,6 +478,7 @@
 				4BE2641F29CBA13F004D7290 /* EmailValidExtension.swift */,
 				4BF5946629D39E200095BDE4 /* PublisherExtension.swift */,
 				4B79ED1729D4951000FF97C9 /* ColorExtension.swift */,
+				4B4E5DF829EE06B600DF76ED /* ShortCodeGenerator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -433,6 +498,7 @@
 				4B8F543A29C36C22003CB934 /* SignInService.swift */,
 				4BF5946429D39AD40095BDE4 /* MedicalMinistrationService.swift */,
 				4B34891629E4706100188216 /* ProductService.swift */,
+				4B4E5DF629EDAAC000DF76ED /* CartService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -450,6 +516,7 @@
 				4B8120E029D1F5810087E78F /* MediGearTabBar */,
 				4B8F543C29C3B1A7003CB934 /* SignIn_SignUp */,
 				4BF5946D29D3A87D0095BDE4 /* APIResponse.swift */,
+				4B0BAA8129F75BC2005F943B /* APIPostData.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -594,10 +661,12 @@
 				4B01018D29E7064200CE418A /* ProductListViewController.swift in Sources */,
 				4B23F40129CD04F50088DCE6 /* ErrorResponse.swift in Sources */,
 				4BF5946529D39AD40095BDE4 /* MedicalMinistrationService.swift in Sources */,
+				4B0BAA8229F75BC2005F943B /* APIPostData.swift in Sources */,
 				4BF5946929D39E840095BDE4 /* MedicalMinistrationViewModel.swift in Sources */,
 				4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */,
 				4BF03ECE29E74F87005C9B91 /* SingleProductView.swift in Sources */,
 				4B79ED1A29D4A69800FF97C9 /* MedicalMinistration.swift in Sources */,
+				4B2C758729F2F5740045680D /* CartViewIconsController.swift in Sources */,
 				4B211EC729C2287200B59F7D /* CustomMediGearButtonStyle.swift in Sources */,
 				4BC634C829B96E830046C2E0 /* Session.swift in Sources */,
 				4B211ECA29C2656C00B59F7D /* RegisterUserViewModel.swift in Sources */,
@@ -607,7 +676,9 @@
 				4BF03ED329E769F6005C9B91 /* SingleProductViewModel.swift in Sources */,
 				4BC634C629B96D4B0046C2E0 /* SignUpService.swift in Sources */,
 				4B8120F029D2386A0087E78F /* HomeViewController.swift in Sources */,
+				4B3D34A729F05CAD00D54DA5 /* Order.swift in Sources */,
 				4B211EC329C21F8600B59F7D /* SignUp.swift in Sources */,
+				4B2C759029F2FF6D0045680D /* CartView.swift in Sources */,
 				4B8F543B29C36C22003CB934 /* SignInService.swift in Sources */,
 				4BC6349C29B9321E0046C2E0 /* AppDelegate.swift in Sources */,
 				4B6E5EA529BF8EAD00A3B26F /* SignUpViewController.swift in Sources */,
@@ -618,16 +689,21 @@
 				4BDBCFA429CA82F200293D8B /* SecureCustomTexField.swift in Sources */,
 				4BC634CA29B96EAA0046C2E0 /* User.swift in Sources */,
 				4B34891A29E4727D00188216 /* SearchBarViewModel.swift in Sources */,
+				4B3D34A929F0861500D54DA5 /* CartViewModel.swift in Sources */,
 				4B211EC529C2263300B59F7D /* FormTextField.swift in Sources */,
 				4BC6349E29B9321E0046C2E0 /* SceneDelegate.swift in Sources */,
+				4B4E5DF929EE06B600DF76ED /* ShortCodeGenerator.swift in Sources */,
 				4BF5946E29D3A87D0095BDE4 /* APIResponse.swift in Sources */,
 				4B79ED1829D4951000FF97C9 /* ColorExtension.swift in Sources */,
+				4B4E5DF729EDAAC000DF76ED /* CartService.swift in Sources */,
+				4BA2D1FF29EAD7A3008032A6 /* Cart.swift in Sources */,
 				4B34891329E46EC200188216 /* Product.swift in Sources */,
 				4BC634B929B937350046C2E0 /* UserRegister.swift in Sources */,
 				4B4224AD29D25056009A2CF4 /* OrderViewController.swift in Sources */,
 				4B34891029E46DEF00188216 /* SearchResultView.swift in Sources */,
 				4B21028329BA136400E18DF1 /* SignIn.swift in Sources */,
 				4B8120E929D20B460087E78F /* MediGearTabBarController.swift in Sources */,
+				4B2C758A29F2FBB80045680D /* PurchaseViewController.swift in Sources */,
 				4BC634C429B957CB0046C2E0 /* NetworkProvider.swift in Sources */,
 				4B80004A29E5B66E0055821D /* SearchResultViewController.swift in Sources */,
 				4BF03ED029E769CA005C9B91 /* SingleProductViewController.swift in Sources */,

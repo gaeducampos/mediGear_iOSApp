@@ -9,12 +9,36 @@ import SwiftUI
 import NukeUI
 
 struct SingleProductView: View {
-    @State var productsAmount = 1
+    
+    @State private var showingAlert = false
+    @State private var quantity = 1
+    @State private var isMinusButtonDisable = true
+    @State private var isPlusButtonDisable = false
+    
+
+    private func disableMinusButton() {
+        if quantity <= 1 {
+            isMinusButtonDisable = true
+        } else {
+            isMinusButtonDisable = false
+        }
+    }
+    
+    private func disablePlusButton(productQuantity: Int) {
+        if quantity >= productQuantity {
+            isPlusButtonDisable = true
+        } else {
+            isPlusButtonDisable = false
+        }
+    }
     
     let product: Product
+    let viewModel: CartViewModel
     
-    init(product: Product) {
+    init(product: Product, viewModel: CartViewModel) {
         self.product = product
+        self.viewModel = viewModel
+        
     }
     
     var body: some View {
@@ -34,29 +58,36 @@ struct SingleProductView: View {
                         Text("Precio Unitario")
                             .font(.system(size: 14))
 
-                        Text("\(product.attributes.price) \(product.attributes.currency)")
+                        Text("$\(product.attributes.price) \(product.attributes.currency)")
                     }
+                    
                     Spacer()
+                    
                     VStack {
                         Text("cantidad")
                             .font(.system(size: 14))
                         HStack {
                             Button {
-                                
+                                quantity -= 1
+                                disableMinusButton()
+                                disablePlusButton(productQuantity: product.attributes.amount)
                             } label: {
                                 Image(systemName: "minus.square")
-                                    .resizable()
-                                    .frame(maxWidth: 20, maxHeight: 20)
+
                             }
-                            Text("\(productsAmount)")
+                            .disabled(isMinusButtonDisable)
+                            
+                            Text("\(quantity)")
                                 .font(.system(size: 15))
+                            
                             Button {
-                                
+                                quantity += 1
+                                disableMinusButton()
+                                disablePlusButton(productQuantity: product.attributes.amount)
                             } label: {
                                 Image(systemName: "plus.square")
-                                    .resizable()
-                                    .frame(maxWidth: 20, maxHeight: 20)
                             }
+                            .disabled(isPlusButtonDisable)
                             
                         }
                         
@@ -64,12 +95,20 @@ struct SingleProductView: View {
                     
                 }
                 Button {
+                    viewModel.appendToCart(cartProduct: CartProduct(product: product, quantity: quantity))
+                    showingAlert = true
                     
                 } label: {
                     Text("Agregar al carrito")
                         .frame(maxWidth: .infinity, minHeight: 50)
                 }
                 .buttonStyle(MediGearButtonStyle(isEnable: true))
+                .alert(isPresented: $showingAlert) {
+                    Alert(
+                        title: Text(""),
+                        message: Text("Producto Agregado al carrito"),
+                        dismissButton: .default(Text("OK")))
+                }
                 
                 Divider()
                     .frame(height: 1)
@@ -131,6 +170,7 @@ struct SingleProductView: View {
 
 struct SingleProductView_Previews: PreviewProvider {
     static var previews: some View {
+        let viewModel = CartViewModel(service: .init(networkProvider: .init()))
         SingleProductView(product: Product(
             id: 10,
             attributes: ProductAttributes(
@@ -145,12 +185,13 @@ struct SingleProductView_Previews: PreviewProvider {
                     height: "147 cm",
                     depth: "32 cm",
                     weight: "29 kg"),
-                price: "$21.900",
+                price: "21.900",
                 currency: "USD",
                 date_added: "2023-04-08T19:31:58.369Z",
                 amount: 23,
                 isAvailable: true,
                 img: "/uploads/endos1_31917d0e6c.png",
-                sub_category: nil)))
+                sub_category: nil)),
+                viewModel: viewModel)
     }
 }

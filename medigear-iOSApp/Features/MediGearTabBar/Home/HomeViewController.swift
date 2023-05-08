@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 import Combine
 
-class HomeViewController: UIViewController {
+class HomeViewController: CartViewController {
     private var cancellables: Set<AnyCancellable> = []
     private let searchViewModel = SearchBarViewModel(service: .init(netWorkProvider: .init()))
     private let medicalMinistrationViewModel: MedicalMinistrationViewModel = .init(service: .init(netWorkProvider: .init()))
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     lazy var searchBarView: UIHostingController = {
         let searchView = UIHostingController(rootView: DashboardContentView(viewModel: medicalMinistrationViewModel))
         searchView.view.translatesAutoresizingMaskIntoConstraints = false
-        searchView.view.backgroundColor = .white
+        searchView.view.backgroundColor = .systemBackground
         searchView.overrideUserInterfaceStyle = .light
         return searchView
     }()
@@ -51,18 +51,16 @@ class HomeViewController: UIViewController {
         self.definesPresentationContext = true
         searchController?.searchBar.searchTextField.addTarget(self, action: #selector(searchResult), for: .editingChanged)
         
+    
         
         navigationItem.searchController = searchController
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.title = "MediGear - Nuestros Productos - "
-
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        navigationItem.title = "MediGear - Nuestros Productos - "
+        navigationItem.title = "- Medigear -  Nuestros Productos"
     }
 
     @objc private func searchResult(_ textField: UITextField) {
@@ -96,13 +94,18 @@ class HomeViewController: UIViewController {
             .store(in: &cancellables)
     }
     
+    
     private func presentSingleProductController() {
         singleProductViewModel
             .productHomeSubject
             .sink { [weak self] product in
-                self?.navigationController?.pushViewController(SingleProductViewController(product: product), animated: true)
+            
+                self?.navigationController?.pushViewController(
+                    SingleProductViewController(
+                        product: product),
+                    animated: true)
             }
             .store(in: &cancellables)
     }
-
+    
 }

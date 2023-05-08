@@ -13,6 +13,7 @@ struct SignUp: View {
     @ObservedObject var viewModel: RegisterUserViewModel
     
     
+    
     let mediGearImageLogoURL = "\(NetworkProvider.Constants.baseLocalHost)/uploads/Screenshot_2023_03_09_at_7_23_58_AM_aa9264b53e.png?updated_at=2023-03-09T13:24:22.963Z"
     
     var body: some View {
@@ -59,6 +60,10 @@ struct SignUp: View {
                 .buttonStyle(MediGearButtonStyle(isEnable: viewModel.isValid))
                 .alert("El usuario ya existe o Email ya existe", isPresented: $viewModel.userInvalidAlert) {
                     Button("Ok", role: .cancel) {}
+                }
+                .alert("El usuario fue creado exitosamente",
+                       isPresented: $viewModel.userLoggedin) {
+                    Button("OK", role: .cancel) {}
                 }
                 
             }

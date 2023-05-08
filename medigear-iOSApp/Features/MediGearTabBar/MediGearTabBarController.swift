@@ -19,10 +19,11 @@ class MediGearTabBarController: UITabBarController {
         super.viewDidLoad()
         
         tabBar.backgroundColor  = .systemBackground
+        tabBar.overrideUserInterfaceStyle = .light
         
         let homeViewController = UINavigationController(rootViewController: HomeViewController())
-        let orderViewController = OrderViewController()
-        let profileViewController = ProfileViewController()
+        let orderViewController = UINavigationController(rootViewController: OrderViewController())
+        let profileViewController = UINavigationController(rootViewController: ProfileViewController()) 
         
         homeViewController.tabBarItem = UITabBarItem(
             title: "Inicio",

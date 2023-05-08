@@ -14,6 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let cart: [CartProduct] = []
+        let userLocation = ""
+        let orderDetails: [String] = []
+        // Get a reference to UserDefaults
+        let defaults = UserDefaults.standard
+        
+        // Encode the array of objects as data
+        let encodedCartProducts = try? JSONEncoder().encode(cart)
+        
+        // Store the encoded data in UserDefaults
+        defaults.set(encodedCartProducts, forKey: "cart")
+        defaults.set(userLocation, forKey: "userLocation")
+        defaults.set(orderDetails, forKey: "orderDetails")
         return true
     }
 

@@ -45,7 +45,6 @@ final class MedicalMinistrationService {
             .addParameters(value: "sub_category", name: "populate")
             .addParameters(value: subCategory, name: "filters[sub_category][name][$eq]")
         
-        print(request.url?.description)
         
         request.httpMethod = "Get"
         request.setValue(

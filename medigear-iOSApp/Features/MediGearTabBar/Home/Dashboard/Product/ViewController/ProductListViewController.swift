@@ -8,11 +8,13 @@
 import UIKit
 import SwiftUI
 
-class ProductListViewController: UIViewController {
+class ProductListViewController: CartViewController {
     let products: [Product]
     let singleProductViewModel: SingleProductViewModel
     
-    init(products: [Product], singleProductViewModel: SingleProductViewModel) {
+    init(
+        products: [Product],
+        singleProductViewModel: SingleProductViewModel) {
         self.products = products
         self.singleProductViewModel = singleProductViewModel
         super.init(nibName: nil, bundle: nil)
@@ -46,6 +48,12 @@ class ProductListViewController: UIViewController {
         setupConstraints()
         
         // navigationItem.title = products[0].attributes.sub_category?.data.attributes.name
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        navigationItem.rightBarButtonItems = cartButtonItems
     }
     
     private func setupConstraints() {

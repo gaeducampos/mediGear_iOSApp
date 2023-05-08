@@ -38,8 +38,3 @@ struct ProductListView: View {
     }
 }
 
-//struct ProductView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProductView(products: [Product(id: <#T##Int#>, attributes: <#T##ProductAttributes#>)])
-//    }
-//}

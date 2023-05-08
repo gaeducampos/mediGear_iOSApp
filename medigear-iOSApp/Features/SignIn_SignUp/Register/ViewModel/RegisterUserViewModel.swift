@@ -30,6 +30,7 @@ final class RegisterUserViewModel: ObservableObject {
     @Published var confirmedPassword = ""
     @Published var isValid = false
     @Published var userInvalidAlert = false
+    @Published var userLoggedin = false
     
     var userSession: Session?
     
@@ -197,6 +198,7 @@ final class RegisterUserViewModel: ObservableObject {
                     self?.userSession = user
                     self?.loggedIn.send()
                     // Store To userDefaults
+                    self?.userLoggedin = true
                 case .failure(_):
                     self?.userInvalidAlert = true
                 }

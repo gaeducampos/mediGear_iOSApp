@@ -8,11 +8,11 @@
 import UIKit
 import SwiftUI
 
-class SingleProductViewController: UIViewController {
+class SingleProductViewController: CartViewController {
     let product: Product
     
     lazy var singleProductView: UIHostingController = {
-        let productView = UIHostingController(rootView: SingleProductView(product: product))
+        let productView = UIHostingController(rootView: SingleProductView(product: product, viewModel: self.viewModel))
         productView.view.translatesAutoresizingMaskIntoConstraints = false
         productView.view.overrideUserInterfaceStyle = .light
         productView.view.backgroundColor = .systemBackground
@@ -22,6 +22,8 @@ class SingleProductViewController: UIViewController {
     init(product: Product) {
         self.product = product
         super.init(nibName: nil, bundle: nil)
+        
+        
     }
     
     
@@ -41,6 +43,10 @@ class SingleProductViewController: UIViewController {
         view.addSubview(singleProductView.view)
         setupConstraints()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     private func setupConstraints() {

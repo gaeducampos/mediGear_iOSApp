@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FormTextField: View {
     
-    var sectionText: String
+    var sectionText: String?
     var notValidInput: String
 
     
@@ -18,10 +18,12 @@ struct FormTextField: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text(sectionText)
-                .padding(.bottom, 5)
-                .foregroundColor(.gray)
-                .font(.system(size: 15))
+            if let text = sectionText {
+                Text(text)
+                    .padding(.bottom, 5)
+                    .foregroundColor(.gray)
+                    .font(.system(size: 15))
+            }
                 
             
             TextField("", text: $textFieldValue)

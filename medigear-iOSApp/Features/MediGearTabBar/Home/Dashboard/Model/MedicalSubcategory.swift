@@ -8,13 +8,13 @@
 import Foundation
 
 
-struct MedicalSubCategory: Decodable, Identifiable {
+struct MedicalSubCategory: Decodable, Identifiable, Encodable {
     let id: Int
     let attributes: MedicalSubCategoryAttributes
 }
 
 
-struct MedicalSubCategoryAttributes: Decodable {
+struct MedicalSubCategoryAttributes: Decodable, Encodable {
     let name: String
     let createdAt: String
     let updatedAt: String

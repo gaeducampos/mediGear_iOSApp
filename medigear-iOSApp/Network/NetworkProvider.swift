@@ -28,6 +28,7 @@ final class NetworkProvider {
     enum Constants {
         static let baseURL = URL(string: "http://localhost:1338/api")!
         static let baseLocalHost = "http://localhost:1338"
+        static let updateProductsURL = URL(string: "http://127.0.0.1:8000/medigear-iosApp/product/update")!
     }
     
     enum NetworkingError: Error {
@@ -79,12 +80,28 @@ final class NetworkProvider {
             .eraseToAnyPublisher()
     }
     
+    
     func request<Value: Decodable>(
         for request: URLRequest,
         decoder: JSONDecoder = JSONDecoder()
     ) -> AnyPublisher<Value, Error> {
         self.request(for: request)
             .decode(type: Value.self, decoder: decoder)
+            .eraseToAnyPublisher()
+    }
+    
+    func updateProductRequest(for request: URLRequest) -> AnyPublisher<Void, Error> {
+        URLSession.shared.dataTaskPublisher(for: request)
+            .tryMap { _, response -> Void in
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    throw URLError(.badServerResponse)
+                }
+                if httpResponse.statusCode == 204 {
+                    return
+                } else {
+                    throw URLError(.badServerResponse)
+                }
+            }
             .eraseToAnyPublisher()
     }
     
@@ -121,6 +138,12 @@ final class NetworkProvider {
 extension URLRequest {
     static var baseRequest: URLRequest {
         var request = URLRequest(url: NetworkProvider.Constants.baseURL)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        return request
+    }
+    
+    static var updateProductsBaseRequest: URLRequest {
+        var request = URLRequest(url: NetworkProvider.Constants.updateProductsURL)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         return request
     }

@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct MedicalMinistration: Decodable, Identifiable {
+struct MedicalMinistration: Decodable, Identifiable, Encodable {
     let id: Int
     let attributes: MedicalMinistrationAttributes
 }
 
 
-struct MedicalMinistrationAttributes: Decodable {
+struct MedicalMinistrationAttributes: Decodable, Encodable {
     let createdAt: String
     let updatedAt: String
     let publishedAt: String

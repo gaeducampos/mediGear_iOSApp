@@ -8,12 +8,12 @@
 import Foundation
 
 
-struct Product: Decodable, Identifiable {
+struct Product: Codable, Identifiable {
     let id: Int
-    let attributes: ProductAttributes
+    var attributes: ProductAttributes
 }
 
-struct ProductAttributes: Decodable {
+struct ProductAttributes: Codable {
     let name: String
     let description: String
     let serial_number: String
@@ -27,11 +27,11 @@ struct ProductAttributes: Decodable {
     let amount: Int
     let isAvailable: Bool
     let img: String
-    let sub_category: APIResponse<MedicalMinistration>?
+    var sub_category: APIResponse<MedicalMinistration>?
     
 }
 
-struct ProductDimensions: Decodable {
+struct ProductDimensions: Codable {
     let width: String
     let height: String
     let depth: String

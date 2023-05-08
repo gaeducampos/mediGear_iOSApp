@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: CartViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

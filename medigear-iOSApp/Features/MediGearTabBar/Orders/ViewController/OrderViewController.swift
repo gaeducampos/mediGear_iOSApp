@@ -7,12 +7,11 @@
 
 import UIKit
 
-class OrderViewController: UIViewController {
+class OrderViewController: CartViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
     }
 
 
