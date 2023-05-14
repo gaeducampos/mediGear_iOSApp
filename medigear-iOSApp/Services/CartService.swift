@@ -15,7 +15,7 @@ final class CartService {
         self.networkProvider = networkProvider
     }
     
-    func createOrderDetails(for singleProductOrder: APIPostData<CartProductOrderDetails>) -> AnyPublisher<APIPostData<OrderDetails>, Error> {
+    func createOrderDetails(for singleProductOrder: APIPostData<CartProductOrderDetails>) -> AnyPublisher<APIPostData<OrderResponseDetails>, Error> {
         var request = URLRequest.baseRequest
             .add(path: "/order-details")
         
@@ -29,7 +29,7 @@ final class CartService {
         return networkProvider.request(for: request)
     }
     
-    func createOrder(for cart: APIPostData<Cart>) -> AnyPublisher<APIPostData<Order>, Error> {
+    func createOrder(for cart: APIPostData<Cart>) -> AnyPublisher<APIPostData<OrderResponse>, Error> {
         
         var request = URLRequest.baseRequest
             .add(path: "/orders")
@@ -46,14 +46,15 @@ final class CartService {
     }
     
     func updateProducts(with cart: [CartProduct]) -> AnyPublisher<Void, Error> {
-        var request = URLRequest.updateProductsBaseRequest
+        var request = URLRequest.fastApiBaseRequest
+            .add(path: "/product/update")
+        
         request.httpMethod = "POST"
 
         let data = try? JSONEncoder().encode(cart)
         request.httpBody = data
         
         let jsonString = String(data: data ?? Data(), encoding: .utf8)!
-        print(jsonString)
         return  networkProvider.updateProductRequest(for: request)
     }
 }

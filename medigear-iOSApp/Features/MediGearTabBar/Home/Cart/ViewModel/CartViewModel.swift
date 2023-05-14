@@ -8,10 +8,16 @@
 import Foundation
 import Combine
 
+
 final class CartViewModel: ObservableObject {
     private let service: CartService
     private var orderCancellable: AnyCancellable?
     private var orderCancellables = Set<AnyCancellable>()
+    
+    var orderCreatedSubject = PassthroughSubject<Void, Never>()
+    
+    @Published var orderCreatedAlert = false
+    @Published var location = ""
     
     init(service: CartService) {
         self.service = service
@@ -62,9 +68,34 @@ final class CartViewModel: ObservableObject {
         let encodedData = try? JSONEncoder().encode(cart)
         UserDefaults.standard.set(encodedData, forKey: "cart")
     }
+    
+    func emptyCart() {
+        location = ""
+        UserDefaults.standard.set(location, forKey: "userLocation")
+        
+        total = 0.00
+        
+        if let cartData = UserDefaults.standard.object(forKey: "cart") as? Data {
+            var cart = try? JSONDecoder().decode([CartProduct].self, from: cartData)
+            cart?.removeAll()
+            guard let cart = cart else {return}
+            let encodedCartData = try? JSONEncoder().encode(cart)
+            UserDefaults.standard.set(encodedCartData, forKey: "cart")
+        }
+    }
+    
+    func getUserId() -> Int {
+        if let userData = UserDefaults.standard.object(forKey: "userInfo") as? Data {
+            let userSession = try? JSONDecoder().decode(Session.self, from: userData)
+            guard let userSession = userSession else {return 0}
+            return userSession.user.id
+        } else {
+            return 0
+        }
+    }
 
 
-    func createOrder(total: Double, location: String, userId: Int, deliveryTime: String) {
+    func createOrder(total: Double, location: String, deliveryTime: String) {
         let cartData = UserDefaults.standard.data(forKey: "cart")
         guard let cartData = cartData else { return }
         let cart = try? JSONDecoder().decode([CartProduct].self, from: cartData)
@@ -87,15 +118,24 @@ final class CartViewModel: ObservableObject {
         
         orderCancellable =  Publishers.MergeMany(orderDetailsProcess)
             .collect()
-            .flatMap { [service] response -> AnyPublisher<APIPostData<Order>, Error> in
+            .flatMap { [weak self, service] response -> AnyPublisher<APIPostData<OrderResponse>, Error> in
+
                 let orderDetails = response.map { order in
                     return "\(order.data.id)"
                 }
+                
+                guard let userId = self?.getUserId() else {
+                        let error = NSError(domain: "mediGear.ios.App", code: -1,
+                                            userInfo: [NSLocalizedDescriptionKey: "User ID is missing"])
+                    return Fail(error: error).eraseToAnyPublisher()
+                }
+                
                 let cart = Cart(total: total,
                                 location: location,
                                 userId: userId,
                                 deliveryTime: deliveryTime,
-                                order_details: orderDetails)
+                                order_details: orderDetails,
+                                status: .pending)
                 let cartData = APIPostData(data: cart, meta: APIPostData<Cart>.Meta())
                 return service
                     .createOrder(for: cartData)
@@ -107,9 +147,11 @@ final class CartViewModel: ObservableObject {
                     .eraseToAnyPublisher()
             }
             .toResult()
-            .sink { result in
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] result in
                 switch result {
-                case .success(_): break
+                case .success(_):
+                    self?.orderCreatedAlert = true
                 case .failure(let error):
                     print("Failure \(error)")
                 }

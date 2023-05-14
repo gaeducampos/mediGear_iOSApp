@@ -44,9 +44,9 @@ struct CartView: View {
                     .foregroundColor(.blue)
                     .font(.system(size: 18))
                     .padding(.bottom)
-                TextField("", text: $location, onEditingChanged: { isEditing in
+                TextField("", text: $viewModel.location, onEditingChanged: { isEditing in
                     if !isEditing {
-                        UserDefaults.standard.set(location, forKey: "userLocation")
+                        UserDefaults.standard.set(viewModel.location, forKey: "userLocation")
                     }
                 })
                 Divider()
@@ -155,13 +155,18 @@ struct CartView: View {
             Button {
                 viewModel.createOrder(total: viewModel.total,
                                       location: location,
-                                      userId: 10,
                                       deliveryTime: getDate())
             } label: {
                 Text("Ordenar")
                     .frame(maxWidth: .infinity, minHeight: 50)
             }
             .buttonStyle(MediGearButtonStyle(isEnable: true))
+            .alert("Orden Creada con exito", isPresented: $viewModel.orderCreatedAlert) {
+                Button("Ok", role: .cancel) {
+                    viewModel.emptyCart()
+                    viewModel.orderCreatedSubject.send()
+                }
+            }
         }
         .padding()
         .onAppear {

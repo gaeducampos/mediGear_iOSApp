@@ -63,7 +63,9 @@ struct SignUp: View {
                 }
                 .alert("El usuario fue creado exitosamente",
                        isPresented: $viewModel.userLoggedin) {
-                    Button("OK", role: .cancel) {}
+                    Button("OK", role: .cancel) {
+                        viewModel.loggedIn.send()
+                    }
                 }
                 
             }

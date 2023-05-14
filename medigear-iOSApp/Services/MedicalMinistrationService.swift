@@ -46,7 +46,7 @@ final class MedicalMinistrationService {
             .addParameters(value: subCategory, name: "filters[sub_category][name][$eq]")
         
         
-        request.httpMethod = "Get"
+        request.httpMethod = "GET"
         request.setValue(
             "Bearer \(NetworkProvider.BearerToken)",
             forHTTPHeaderField: "Authorization")

@@ -23,9 +23,15 @@
 		4B34891329E46EC200188216 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34891229E46EC200188216 /* Product.swift */; };
 		4B34891729E4706100188216 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34891629E4706100188216 /* ProductService.swift */; };
 		4B34891A29E4727D00188216 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34891929E4727D00188216 /* SearchBarViewModel.swift */; };
-		4B3D34A729F05CAD00D54DA5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D34A629F05CAD00D54DA5 /* Order.swift */; };
+		4B3738B62A0D9A5000BBCC39 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3738B52A0D9A5000BBCC39 /* Order.swift */; };
+		4B3738B92A0D9AA700BBCC39 /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3738B82A0D9AA700BBCC39 /* OrderService.swift */; };
+		4B3738BB2A0D9E6B00BBCC39 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3738BA2A0D9E6B00BBCC39 /* OrdersViewModel.swift */; };
+		4B3738BE2A0DA21500BBCC39 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3738BD2A0DA21500BBCC39 /* OrdersView.swift */; };
+		4B3738C02A0DBD9500BBCC39 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3738BF2A0DBD9500BBCC39 /* OrderDetailsViewController.swift */; };
+		4B3738C22A0DBF0200BBCC39 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3738C12A0DBF0200BBCC39 /* OrderDetailView.swift */; };
+		4B3D34A729F05CAD00D54DA5 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D34A629F05CAD00D54DA5 /* OrderResponse.swift */; };
 		4B3D34A929F0861500D54DA5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D34A829F0861500D54DA5 /* CartViewModel.swift */; };
-		4B4224AD29D25056009A2CF4 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4224AC29D25056009A2CF4 /* OrderViewController.swift */; };
+		4B4224AD29D25056009A2CF4 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4224AC29D25056009A2CF4 /* OrdersViewController.swift */; };
 		4B4224B129D25162009A2CF4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4224B029D25162009A2CF4 /* ProfileViewController.swift */; };
 		4B4E5DF729EDAAC000DF76ED /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E5DF629EDAAC000DF76ED /* CartService.swift */; };
 		4B4E5DF929EE06B600DF76ED /* ShortCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E5DF829EE06B600DF76ED /* ShortCodeGenerator.swift */; };
@@ -52,6 +58,7 @@
 		4BC634C629B96D4B0046C2E0 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC634C529B96D4B0046C2E0 /* SignUpService.swift */; };
 		4BC634C829B96E830046C2E0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC634C729B96E830046C2E0 /* Session.swift */; };
 		4BC634CA29B96EAA0046C2E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC634C929B96EAA0046C2E0 /* User.swift */; };
+		4BCB50B92A0EF6E500C1EDAB /* PDFOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB50B82A0EF6E500C1EDAB /* PDFOrderViewController.swift */; };
 		4BDBCFA229CA6B8100293D8B /* Navajo-Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 4BDBCFA129CA6B8100293D8B /* Navajo-Swift */; };
 		4BDBCFA429CA82F200293D8B /* SecureCustomTexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBCFA329CA82F200293D8B /* SecureCustomTexField.swift */; };
 		4BE18AFC29D7894400D5B24C /* MedicalSubcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE18AFB29D7894400D5B24C /* MedicalSubcategory.swift */; };
@@ -83,9 +90,15 @@
 		4B34891229E46EC200188216 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4B34891629E4706100188216 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		4B34891929E4727D00188216 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
-		4B3D34A629F05CAD00D54DA5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		4B3738B52A0D9A5000BBCC39 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		4B3738B82A0D9AA700BBCC39 /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
+		4B3738BA2A0D9E6B00BBCC39 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		4B3738BD2A0DA21500BBCC39 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		4B3738BF2A0DBD9500BBCC39 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		4B3738C12A0DBF0200BBCC39 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		4B3D34A629F05CAD00D54DA5 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
 		4B3D34A829F0861500D54DA5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
-		4B4224AC29D25056009A2CF4 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		4B4224AC29D25056009A2CF4 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		4B4224B029D25162009A2CF4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4B4E5DF629EDAAC000DF76ED /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
 		4B4E5DF829EE06B600DF76ED /* ShortCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCodeGenerator.swift; sourceTree = "<group>"; };
@@ -111,6 +124,7 @@
 		4BC634C529B96D4B0046C2E0 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		4BC634C729B96E830046C2E0 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4BC634C929B96EAA0046C2E0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4BCB50B82A0EF6E500C1EDAB /* PDFOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFOrderViewController.swift; sourceTree = "<group>"; };
 		4BDBCFA329CA82F200293D8B /* SecureCustomTexField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureCustomTexField.swift; sourceTree = "<group>"; };
 		4BE18AFB29D7894400D5B24C /* MedicalSubcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalSubcategory.swift; sourceTree = "<group>"; };
 		4BE2641F29CBA13F004D7290 /* EmailValidExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidExtension.swift; sourceTree = "<group>"; };
@@ -255,10 +269,28 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4B3738B72A0D9A8700BBCC39 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B3738BA2A0D9E6B00BBCC39 /* OrdersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B3738BC2A0DA1FA00BBCC39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B3738BD2A0DA21500BBCC39 /* OrdersView.swift */,
+				4B3738C12A0DBF0200BBCC39 /* OrderDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4B3D34A529F05B7100D54DA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4B3D34A629F05CAD00D54DA5 /* Order.swift */,
+				4B3D34A629F05CAD00D54DA5 /* OrderResponse.swift */,
+				4B3738B52A0D9A5000BBCC39 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				4B3D34A529F05B7100D54DA5 /* Model */,
+				4B3738B72A0D9A8700BBCC39 /* ViewModel */,
 				4B4224AB29D25040009A2CF4 /* ViewController */,
 			);
 			path = Orders;
@@ -275,7 +308,9 @@
 		4B4224AB29D25040009A2CF4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4B4224AC29D25056009A2CF4 /* OrderViewController.swift */,
+				4B4224AC29D25056009A2CF4 /* OrdersViewController.swift */,
+				4B3738BF2A0DBD9500BBCC39 /* OrderDetailsViewController.swift */,
+				4BCB50B82A0EF6E500C1EDAB /* PDFOrderViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -309,6 +344,7 @@
 				4B8120E829D20B460087E78F /* MediGearTabBarController.swift */,
 				4B8120EA29D20B5B0087E78F /* Home */,
 				4B4224AA29D2502A009A2CF4 /* Orders */,
+				4B3738BC2A0DA1FA00BBCC39 /* View */,
 				4B4224AE29D25130009A2CF4 /* Profile */,
 			);
 			path = MediGearTabBar;
@@ -499,6 +535,7 @@
 				4BF5946429D39AD40095BDE4 /* MedicalMinistrationService.swift */,
 				4B34891629E4706100188216 /* ProductService.swift */,
 				4B4E5DF629EDAAC000DF76ED /* CartService.swift */,
+				4B3738B82A0D9AA700BBCC39 /* OrderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -667,6 +704,7 @@
 				4BF03ECE29E74F87005C9B91 /* SingleProductView.swift in Sources */,
 				4B79ED1A29D4A69800FF97C9 /* MedicalMinistration.swift in Sources */,
 				4B2C758729F2F5740045680D /* CartViewIconsController.swift in Sources */,
+				4B3738B62A0D9A5000BBCC39 /* Order.swift in Sources */,
 				4B211EC729C2287200B59F7D /* CustomMediGearButtonStyle.swift in Sources */,
 				4BC634C829B96E830046C2E0 /* Session.swift in Sources */,
 				4B211ECA29C2656C00B59F7D /* RegisterUserViewModel.swift in Sources */,
@@ -675,8 +713,9 @@
 				4BE18AFC29D7894400D5B24C /* MedicalSubcategory.swift in Sources */,
 				4BF03ED329E769F6005C9B91 /* SingleProductViewModel.swift in Sources */,
 				4BC634C629B96D4B0046C2E0 /* SignUpService.swift in Sources */,
+				4B3738BE2A0DA21500BBCC39 /* OrdersView.swift in Sources */,
 				4B8120F029D2386A0087E78F /* HomeViewController.swift in Sources */,
-				4B3D34A729F05CAD00D54DA5 /* Order.swift in Sources */,
+				4B3D34A729F05CAD00D54DA5 /* OrderResponse.swift in Sources */,
 				4B211EC329C21F8600B59F7D /* SignUp.swift in Sources */,
 				4B2C759029F2FF6D0045680D /* CartView.swift in Sources */,
 				4B8F543B29C36C22003CB934 /* SignInService.swift in Sources */,
@@ -687,6 +726,8 @@
 				4BF5946729D39E200095BDE4 /* PublisherExtension.swift in Sources */,
 				4BF5946C29D3A1A60095BDE4 /* DashboardContentView.swift in Sources */,
 				4BDBCFA429CA82F200293D8B /* SecureCustomTexField.swift in Sources */,
+				4BCB50B92A0EF6E500C1EDAB /* PDFOrderViewController.swift in Sources */,
+				4B3738C02A0DBD9500BBCC39 /* OrderDetailsViewController.swift in Sources */,
 				4BC634CA29B96EAA0046C2E0 /* User.swift in Sources */,
 				4B34891A29E4727D00188216 /* SearchBarViewModel.swift in Sources */,
 				4B3D34A929F0861500D54DA5 /* CartViewModel.swift in Sources */,
@@ -695,16 +736,19 @@
 				4B4E5DF929EE06B600DF76ED /* ShortCodeGenerator.swift in Sources */,
 				4BF5946E29D3A87D0095BDE4 /* APIResponse.swift in Sources */,
 				4B79ED1829D4951000FF97C9 /* ColorExtension.swift in Sources */,
+				4B3738BB2A0D9E6B00BBCC39 /* OrdersViewModel.swift in Sources */,
 				4B4E5DF729EDAAC000DF76ED /* CartService.swift in Sources */,
 				4BA2D1FF29EAD7A3008032A6 /* Cart.swift in Sources */,
 				4B34891329E46EC200188216 /* Product.swift in Sources */,
 				4BC634B929B937350046C2E0 /* UserRegister.swift in Sources */,
-				4B4224AD29D25056009A2CF4 /* OrderViewController.swift in Sources */,
+				4B4224AD29D25056009A2CF4 /* OrdersViewController.swift in Sources */,
 				4B34891029E46DEF00188216 /* SearchResultView.swift in Sources */,
 				4B21028329BA136400E18DF1 /* SignIn.swift in Sources */,
 				4B8120E929D20B460087E78F /* MediGearTabBarController.swift in Sources */,
 				4B2C758A29F2FBB80045680D /* PurchaseViewController.swift in Sources */,
+				4B3738B92A0D9AA700BBCC39 /* OrderService.swift in Sources */,
 				4BC634C429B957CB0046C2E0 /* NetworkProvider.swift in Sources */,
+				4B3738C22A0DBF0200BBCC39 /* OrderDetailView.swift in Sources */,
 				4B80004A29E5B66E0055821D /* SearchResultViewController.swift in Sources */,
 				4BF03ED029E769CA005C9B91 /* SingleProductViewController.swift in Sources */,
 				4B8F543F29C3B294003CB934 /* LogInViewModel.swift in Sources */,

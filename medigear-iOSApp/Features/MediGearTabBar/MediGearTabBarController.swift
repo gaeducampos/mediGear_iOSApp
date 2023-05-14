@@ -22,7 +22,7 @@ class MediGearTabBarController: UITabBarController {
         tabBar.overrideUserInterfaceStyle = .light
         
         let homeViewController = UINavigationController(rootViewController: HomeViewController())
-        let orderViewController = UINavigationController(rootViewController: OrderViewController())
+        let orderViewController = OrdersViewController()
         let profileViewController = UINavigationController(rootViewController: ProfileViewController()) 
         
         homeViewController.tabBarItem = UITabBarItem(

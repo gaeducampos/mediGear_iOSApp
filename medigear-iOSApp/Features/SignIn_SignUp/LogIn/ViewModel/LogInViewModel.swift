@@ -33,9 +33,15 @@ final class LogInViewModel: ObservableObject {
             .sink { [weak self] result in
                 switch result {
                 case .success(let user):
-                    self?.sessionResponse = user
-                    // Store To user Defaults
-                    self?.loggedIn.send()
+                    if let userData = UserDefaults.standard.object(forKey: "userInfo") as? Data {
+                        self?.loggedIn.send()
+                        // Store user Info to userDefaults
+                        let userInfo = try? JSONDecoder().decode(Session.self, from: userData)
+                        guard var userInfo = userInfo else {return}
+                        userInfo = user
+                        let encondedUserInfo = try? JSONEncoder().encode(userInfo)
+                        UserDefaults.standard.set(encondedUserInfo, forKey: "userInfo")
+                    }
                 case .failure(_):
                     self?.presentNotUserValidAlert = true
                 }

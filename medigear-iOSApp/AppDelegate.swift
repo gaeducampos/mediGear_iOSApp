@@ -17,16 +17,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let cart: [CartProduct] = []
         let userLocation = ""
         let orderDetails: [String] = []
+        let userSessionInfo = Session(jwt: "",
+                                      user: User(id: 0,
+                                                 username: "",
+                                                 email: "",
+                                                 provider: "",
+                                                 confirmed: false,
+                                                 blocked: false,
+                                                 createdAt: "",
+                                                 updatedAt: "",
+                                                 fullName: ""))
         // Get a reference to UserDefaults
         let defaults = UserDefaults.standard
         
         // Encode the array of objects as data
         let encodedCartProducts = try? JSONEncoder().encode(cart)
+        let encondedUserInfo = try? JSONEncoder().encode(userSessionInfo)
         
         // Store the encoded data in UserDefaults
         defaults.set(encodedCartProducts, forKey: "cart")
         defaults.set(userLocation, forKey: "userLocation")
         defaults.set(orderDetails, forKey: "orderDetails")
+        defaults.set(encondedUserInfo, forKey: "userInfo")
         return true
     }
 

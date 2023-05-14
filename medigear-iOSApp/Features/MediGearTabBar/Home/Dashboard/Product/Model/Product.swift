@@ -13,6 +13,8 @@ struct Product: Codable, Identifiable {
     var attributes: ProductAttributes
 }
 
+
+
 struct ProductAttributes: Codable {
     let name: String
     let description: String
@@ -29,6 +31,7 @@ struct ProductAttributes: Codable {
     let img: String
     var sub_category: APIResponse<MedicalMinistration>?
     
+    
 }
 
 struct ProductDimensions: Codable {
@@ -36,4 +39,6 @@ struct ProductDimensions: Codable {
     let height: String
     let depth: String
     let weight: String
+    
+    
 }

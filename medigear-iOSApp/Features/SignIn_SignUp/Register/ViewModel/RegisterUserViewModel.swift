@@ -195,10 +195,15 @@ final class RegisterUserViewModel: ObservableObject {
             .sink { [weak self] result in
                 switch result {
                 case .success(let user):
-                    self?.userSession = user
-                    self?.loggedIn.send()
-                    // Store To userDefaults
-                    self?.userLoggedin = true
+                    if let userData = UserDefaults.standard.object(forKey: "userInfo") as? Data {
+                        // Store user Info to userDefaults
+                        let userInfo = try? JSONDecoder().decode(Session.self, from: userData)
+                        guard var userInfo = userInfo else {return}
+                        userInfo = user
+                        let encondedUserInfo = try? JSONEncoder().encode(userInfo)
+                        UserDefaults.standard.set(encondedUserInfo, forKey: "userInfo")
+                        self?.userLoggedin = true
+                    }
                 case .failure(_):
                     self?.userInvalidAlert = true
                 }

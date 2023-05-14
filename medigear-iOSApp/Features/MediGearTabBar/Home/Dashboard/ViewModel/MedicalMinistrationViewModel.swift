@@ -33,7 +33,6 @@ class MedicalMinistrationViewModel: ObservableObject {
             .sink { [weak self] result in
                 switch result {
                 case .success(let response):
-                    print(response.data)
                     self?.medicalSpecialties = response.data
                 case .failure(let error):
                     print("Failure \(error)")

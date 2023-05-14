@@ -7,9 +7,11 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class PurchaseViewController: UIViewController {
     let viewModel: CartViewModel
+    var cancellables = Set<AnyCancellable>()
 
     
     init(viewModel: CartViewModel) {
@@ -35,6 +37,7 @@ class PurchaseViewController: UIViewController {
         addChild(cartView)
         view.addSubview(cartView.view)
         setupConstrainst()
+        orderCreated()
         
     }
     
@@ -45,6 +48,15 @@ class PurchaseViewController: UIViewController {
             cartView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             cartView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor)
         ])
+    }
+    
+    private func orderCreated() {
+        viewModel
+            .orderCreatedSubject
+            .sink {
+                self.dismiss(animated: true, completion: nil)
+            }
+            .store(in: &cancellables)
     }
     
 

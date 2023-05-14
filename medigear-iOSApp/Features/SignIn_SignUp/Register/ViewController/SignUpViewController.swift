@@ -14,7 +14,7 @@ class SignUpViewController: UIViewController {
     private var cancellables = Set<AnyCancellable>()
     
     lazy var signUp: UIHostingController = {
-        let signUpView = UIHostingController(rootView: SignUp(viewModel: .init(service: .init(networkProvider: .init()))))
+        let signUpView = UIHostingController(rootView: SignUp(viewModel: viewModel))
         signUpView.view.translatesAutoresizingMaskIntoConstraints = false
         signUpView.view.backgroundColor = .systemBackground
         signUpView.overrideUserInterfaceStyle = .light
@@ -30,6 +30,7 @@ class SignUpViewController: UIViewController {
         addChild(signUp)
         view.addSubview(signUp.view)
         setUpContraints()
+        userLoggedIn()
     }
     
     private func setUpContraints() {

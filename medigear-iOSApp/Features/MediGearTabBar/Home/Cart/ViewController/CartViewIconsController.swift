@@ -32,6 +32,7 @@ class CartViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view.overrideUserInterfaceStyle = .light
         
+        
     }
     
 
@@ -40,9 +41,6 @@ class CartViewController: UIViewController {
         self.present(PurchaseViewController(viewModel: self.viewModel), animated: true, completion: nil)
     }
     
-    @objc func printSomething() {
-        print("hi")
-    }
 
     @objc func userIconTapped() {
         // Handle user icon tapped

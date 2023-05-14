@@ -45,10 +45,10 @@ class HomeViewController: CartViewController {
         searchController = UISearchController(searchResultsController: SearchResultViewController(
             viewModel: searchViewModel,
             singleProductViewModel: singleProductViewModel))
-        searchController?.hidesNavigationBarDuringPresentation = false
-        searchController?.obscuresBackgroundDuringPresentation = false
+//        searchController?.hidesNavigationBarDuringPresentation = false
+//        searchController?.obscuresBackgroundDuringPresentation = false
         searchController?.searchBar.placeholder = "Buscar"
-        self.definesPresentationContext = true
+//        self.definesPresentationContext = true
         searchController?.searchBar.searchTextField.addTarget(self, action: #selector(searchResult), for: .editingChanged)
         
     

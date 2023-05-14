@@ -7,16 +7,20 @@
 
 import Foundation
 
+enum Status: String, Codable {
+    case pending = "s1"
+    case active = "s2"
+    case complete = "s3"
+}
+
 struct Cart: Encodable, Decodable {
     let total: Double
-    var isActive = false
-    var isComplete = false
-    var isPending = true
     let location: String
     let userId: Int
     let deliveryTime: String
     let order_details: [String]
     var orderReference = ShortCodeGenerator.shortUUID(for: UUID())
+    let status: Status
 }
 
 struct CartProductOrderDetails: Encodable, Decodable {
@@ -31,4 +35,5 @@ struct CartProduct: Identifiable, Encodable, Decodable {
     let quantity: Int
 
 }
+
 
