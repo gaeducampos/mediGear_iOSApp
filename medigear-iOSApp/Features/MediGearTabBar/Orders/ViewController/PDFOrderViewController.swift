@@ -8,7 +8,7 @@
 import UIKit
 import PDFKit
 
-class PDFOrderViewController: UINavigationController {
+class PDFOrderViewController: UIViewController {
     let pdfBase64: OrderPDF
     
     init(pdfBase64: OrderPDF) {

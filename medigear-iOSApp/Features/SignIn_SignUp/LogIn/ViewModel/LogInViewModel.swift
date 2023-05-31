@@ -12,6 +12,8 @@ final class LogInViewModel: ObservableObject {
     var logInCancellable: AnyCancellable?
     private let service: SignInService
     
+    let presenResetPasswordSubject = PassthroughSubject<Void, Never>()
+    
     
     @Published var presentNotUserValidAlert = false
     
@@ -33,15 +35,10 @@ final class LogInViewModel: ObservableObject {
             .sink { [weak self] result in
                 switch result {
                 case .success(let user):
-                    if let userData = UserDefaults.standard.object(forKey: "userInfo") as? Data {
-                        self?.loggedIn.send()
-                        // Store user Info to userDefaults
-                        let userInfo = try? JSONDecoder().decode(Session.self, from: userData)
-                        guard var userInfo = userInfo else {return}
-                        userInfo = user
-                        let encondedUserInfo = try? JSONEncoder().encode(userInfo)
-                        UserDefaults.standard.set(encondedUserInfo, forKey: "userInfo")
-                    }
+                    let encondedUserInfo = try? JSONEncoder().encode(user)
+                    UserDefaults.standard.set(encondedUserInfo, forKey: "userInfo")
+                    
+                    self?.loggedIn.send()
                 case .failure(_):
                     self?.presentNotUserValidAlert = true
                 }

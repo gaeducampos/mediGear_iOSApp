@@ -28,41 +28,43 @@ struct OrdersView: View {
         
         
         VStack {
-            List(viewModel.userOrders) { order in
-                VStack(spacing: 10) {
-                    Text("Orden #\(order.orderReference)")
-                        .bold()
-                    Text(orderStatus(status: order.status))
-                    Text("Fecha de entrega \(order.deliveryTime)")
-                    
-                    Button(action: {
-                        viewModel.orderDetailSubject.send(order)
-                    }) {
-                        Text("Ver Detalle")
-                        .frame(maxWidth: .infinity, minHeight: 30)
+            if viewModel.userOrders.isEmpty {
+                Text("No hay Ordenes")
+            } else {
+                List(viewModel.userOrders) { order in
+                    VStack(spacing: 10) {
+                        Text("Orden #\(order.orderReference)")
+                            .bold()
+                        Text(orderStatus(status: order.status))
+                        Text("Fecha de Pedido \(viewModel.dateFormatter(for: order.createdAt))")
                         
-                        
+                        Button(action: {
+                            viewModel.orderDetailSubject.send(order)
+                        }) {
+                            Text("Ver Detalle")
+                                .frame(maxWidth: .infinity, minHeight: 30)
+                        }
+                        .buttonStyle(MediGearButtonStyle(isEnable: true))
                     }
-                    .buttonStyle(MediGearButtonStyle(isEnable: true))
                 }
-            }
-            
-            if viewModel.isLoading {
-                ProgressView("Cargando...")
-            }
-            
-            Button(action: {
-                viewModel.getUserOrdersPDF()
-            }) {
-                Text("Visualizar Ordernes PDF")
-                .frame(maxWidth: .infinity, minHeight: 50)
                 
+                if viewModel.isLoading {
+                    ProgressView("Cargando...")
+                }
                 
+                Button(action: {
+                    viewModel.getUserOrdersPDF()
+                }) {
+                    Text("Visualizar Ordernes PDF")
+                        .frame(maxWidth: .infinity, minHeight: 50)
+                    
+                    
+                }
+                .buttonStyle(MediGearButtonStyle(isEnable: true))
+                .opacity(viewModel.isButtonPDFHidden ? 0 : 1)
+                .disabled(viewModel.isButtonPDFHidden)
+                .padding()
             }
-            .buttonStyle(MediGearButtonStyle(isEnable: true))
-            .opacity(viewModel.isButtonPDFHidden ? 0 : 1)
-            .disabled(viewModel.isButtonPDFHidden)
-            .padding()
         }
     }
 }

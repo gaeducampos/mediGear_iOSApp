@@ -77,7 +77,7 @@ struct SignIn: View {
                 
                 
                 Button(action: {
-                    
+                    viewModel.presenResetPasswordSubject.send()
                 }, label: {
                     Text("¿Olvidaste tu contraseña?")
                         .font(.system(size: 14))

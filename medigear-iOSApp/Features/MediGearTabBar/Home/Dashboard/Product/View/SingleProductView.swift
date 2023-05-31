@@ -13,11 +13,11 @@ struct SingleProductView: View {
     @State private var showingAlert = false
     @State private var quantity = 1
     @State private var isMinusButtonDisable = true
-    @State private var isPlusButtonDisable = false
+    @State private var isPlusButtonDisable: Bool
     
-
+    
     private func disableMinusButton() {
-        if quantity <= 1 {
+        if quantity <= 1 || product.attributes.amount == 0 {
             isMinusButtonDisable = true
         } else {
             isMinusButtonDisable = false
@@ -25,7 +25,7 @@ struct SingleProductView: View {
     }
     
     private func disablePlusButton(productQuantity: Int) {
-        if quantity >= productQuantity {
+        if quantity >= productQuantity || product.attributes.amount == 0  {
             isPlusButtonDisable = true
         } else {
             isPlusButtonDisable = false
@@ -39,6 +39,12 @@ struct SingleProductView: View {
         self.product = product
         self.viewModel = viewModel
         
+        
+        if product.attributes.amount == 0 {
+            self.isPlusButtonDisable = true
+        } else {
+            self.isPlusButtonDisable = false
+        }
     }
     
     var body: some View {
@@ -57,8 +63,15 @@ struct SingleProductView: View {
                     VStack(alignment: .leading) {
                         Text("Precio Unitario")
                             .font(.system(size: 14))
+                        
 
                         Text("$\(product.attributes.price) \(product.attributes.currency)")
+                        
+                        if product.attributes.amount == 0 {
+                            Text("No hay stock")
+                                .font(.system(size: 14))
+                                .foregroundColor(.red)
+                        }
                     }
                     
                     Spacer()
@@ -95,6 +108,7 @@ struct SingleProductView: View {
                     
                 }
                 Button {
+                    
                     viewModel.appendToCart(cartProduct: CartProduct(product: product, quantity: quantity))
                     showingAlert = true
                     
@@ -102,13 +116,14 @@ struct SingleProductView: View {
                     Text("Agregar al carrito")
                         .frame(maxWidth: .infinity, minHeight: 50)
                 }
-                .buttonStyle(MediGearButtonStyle(isEnable: true))
+                .buttonStyle(MediGearButtonStyle(isEnable: product.attributes.amount == 0 ? false : true))
                 .alert(isPresented: $showingAlert) {
                     Alert(
                         title: Text(""),
                         message: Text("Producto Agregado al carrito"),
                         dismissButton: .default(Text("OK")))
                 }
+                .disabled(product.attributes.amount == 0 ? true : false)
                 
                 Divider()
                     .frame(height: 1)

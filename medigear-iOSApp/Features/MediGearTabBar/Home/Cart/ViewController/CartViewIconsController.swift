@@ -14,15 +14,18 @@ class CartViewController: UIViewController {
     
     
     let cartIcon = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: nil, action: nil)
-    
+    var isResetPasswordVCPresented: Bool
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        if isResetPasswordVCPresented {
+            navigationItem.rightBarButtonItems = []
+        } else {
+            navigationItem.rightBarButtonItems = [cartIcon]
+        }
 
-        navigationItem.rightBarButtonItems = [cartIcon]
     }
     
     override func viewDidLoad() {
@@ -35,16 +38,27 @@ class CartViewController: UIViewController {
         
     }
     
+    init(isResetPasswordVCPresented: Bool) {
+        self.isResetPasswordVCPresented = isResetPasswordVCPresented
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 
     @objc func cartIconTapped() {
         viewModel.getTotal()
-        self.present(PurchaseViewController(viewModel: self.viewModel), animated: true, completion: nil)
+        let purchaseVC = UINavigationController(rootViewController: PurchaseViewController(viewModel: self.viewModel))
+        self.present(purchaseVC, animated: true, completion: nil)
     }
     
 
     @objc func userIconTapped() {
         // Handle user icon tapped
     }
+    
 
 
     

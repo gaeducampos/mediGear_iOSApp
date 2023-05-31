@@ -153,8 +153,9 @@ struct CartView: View {
             
             
             Button {
+                print(location)
                 viewModel.createOrder(total: viewModel.total,
-                                      location: location,
+                                      location: viewModel.location,
                                       deliveryTime: getDate())
             } label: {
                 Text("Ordenar")

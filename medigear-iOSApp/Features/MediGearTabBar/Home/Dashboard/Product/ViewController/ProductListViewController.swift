@@ -17,7 +17,7 @@ class ProductListViewController: CartViewController {
         singleProductViewModel: SingleProductViewModel) {
         self.products = products
         self.singleProductViewModel = singleProductViewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(isResetPasswordVCPresented: false)
     }
     
     required init?(coder: NSCoder) {

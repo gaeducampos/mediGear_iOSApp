@@ -32,3 +32,11 @@ struct APIResponse<Value: Codable>: Decodable, Encodable {
         case meta
     }
 }
+
+struct ForgotPasswordResponse: Decodable {
+    let ok: Bool
+}
+
+struct EmailToResetPassword: Encodable {
+    let email: String
+}

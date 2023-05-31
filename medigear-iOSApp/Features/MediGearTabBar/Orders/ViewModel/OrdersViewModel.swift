@@ -51,7 +51,12 @@ final class OrdersViewModel: ObservableObject {
             .sink { [weak self] result in
                 switch result {
                 case .success(let userOrders):
-                    self?.userOrders = userOrders
+                    if userOrders.isEmpty {
+                        self?.isButtonPDFHidden = true
+                    } else {
+                        self?.isButtonPDFHidden = false
+                        self?.userOrders = userOrders
+                    }
                 case .failure(let error):
                     print("Failure \(error)")
                 }
@@ -104,6 +109,19 @@ final class OrdersViewModel: ObservableObject {
                     print("Failure \(error)")
                 }
             }
+    }
+    
+    func dateFormatter(for userDate: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        if let date = formatter.date(from: userDate) {
+            let outputFormatter = DateFormatter()
+            outputFormatter.dateFormat = "dd/MM/yyyy"
+            let outputString = outputFormatter.string(from: date)
+            return outputString // this will print "14/05/2023 16:05"
+        } else {
+            return ""
+        }
     }
     
     

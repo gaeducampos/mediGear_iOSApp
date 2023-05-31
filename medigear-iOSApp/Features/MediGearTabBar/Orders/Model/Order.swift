@@ -14,8 +14,8 @@ struct Order: Decodable, Identifiable {
     let total: Double
     let deliveryTime: String
     let orderDetails: [OrderDetails]
-    
-    
+    let location: String
+    let createdAt: String
 }
 
 struct OrderDetails: Decodable, Identifiable {

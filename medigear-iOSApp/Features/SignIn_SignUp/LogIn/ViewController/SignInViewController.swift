@@ -39,6 +39,10 @@ class SignInViewController: UIViewController {
         view.addSubview(signIn.view)
         setUpConstraints()
         loggedIn()
+        presentResetPasswordVC()
+        
+        navigationItem.hidesBackButton = true
+        tabBarController?.tabBar.isHidden = true
     }
     
     
@@ -51,11 +55,19 @@ class SignInViewController: UIViewController {
         ])
     }
     
-    func presentSignUpView() {
+    private func presentSignUpView() {
         self.navigationController?.show(SignUpViewController(), sender: .none)
     }
     
-    
+    private func presentResetPasswordVC() {
+        viewModel
+            .presenResetPasswordSubject
+            .sink {
+                self.navigationController?.pushViewController(RestPasswordViewController(isResetPasswordVCPresented: true), animated: true)
+            }
+            .store(in: &cancellables)
+    }
+
     private func loggedIn() {
             viewModel
             .loggedIn

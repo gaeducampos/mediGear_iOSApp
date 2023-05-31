@@ -8,9 +8,11 @@
 import Foundation
 import Combine
 
-final class SingleProductViewModel {
+final class SingleProductViewModel: ObservableObject {
     
     let productHomeSubject = PassthroughSubject<Product, Never>()
     let dismissSearchController = PassthroughSubject<Bool, Never>()
+    
+    
     
 }

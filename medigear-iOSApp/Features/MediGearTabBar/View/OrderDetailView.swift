@@ -15,6 +15,20 @@ struct OrderDetailView: View {
         self.order = order
     }
     
+    private func dateFormatter(for userDate: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        if let date = formatter.date(from: userDate) {
+            let outputFormatter = DateFormatter()
+            outputFormatter.dateFormat = "dd/MM/yyyy"
+            let outputString = outputFormatter.string(from: date)
+            return outputString // this will print "14/05/2023 16:05"
+        } else {
+            return ""
+        }
+    }
+    
+    
     private func orderStatus(status: Status) -> String {
         switch status {
         case .pending:
@@ -51,7 +65,7 @@ struct OrderDetailView: View {
              .frame(height: 1)
              .padding(.horizontal, 10)
              .background(.gray)
-            
+
             HStack {
                 Text("Fecha de entrega: ")
                 Spacer()
@@ -64,11 +78,12 @@ struct OrderDetailView: View {
              .padding(.horizontal, 10)
              .background(.gray)
             
+            
+            
             HStack {
-                Text("Estado de la entrega: ")
+                Text("Fecha de creación de la orden: ")
                 Spacer()
-                Text("\(orderStatus(status: order.status))")
-                    .foregroundColor(colorOrderStatus(status: order.status))
+                Text("\(dateFormatter(for: order.createdAt))")
             }
             .padding()
             
@@ -77,6 +92,16 @@ struct OrderDetailView: View {
              .padding(.horizontal, 10)
              .background(.gray)
             
+            
+            HStack {
+                Text("Estado de la entrega: ")
+                Spacer()
+                Text("\(orderStatus(status: order.status))")
+                    .foregroundColor(colorOrderStatus(status: order.status))
+            }
+            .padding()
+            
+
             List(order.orderDetails) { product in
                 HStack(spacing: 10) {
                     Divider()
@@ -145,7 +170,7 @@ struct OrderDetailView_Previews: PreviewProvider {
                           status: .complete,
                           total: 45.232,
                           deliveryTime: "11/23/2023",
-                          orderDetails: orderDetails)
+                          orderDetails: orderDetails, location: "", createdAt: "")
         OrderDetailView(order: order)
     }
 }

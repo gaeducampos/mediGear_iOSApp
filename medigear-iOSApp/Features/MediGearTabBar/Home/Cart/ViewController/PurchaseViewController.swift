@@ -39,6 +39,12 @@ class PurchaseViewController: UIViewController {
         setupConstrainst()
         orderCreated()
         
+        // Create a custom UIBarButtonItem with a close button image
+        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
+        
+        // Set the close button as the left bar button item
+        navigationItem.leftBarButtonItem = closeButton
+        
     }
     
     private func setupConstrainst() {
@@ -57,6 +63,10 @@ class PurchaseViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             }
             .store(in: &cancellables)
+    }
+    
+    @objc private func closeButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 

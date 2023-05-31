@@ -58,7 +58,7 @@ class OrdersViewController: CartViewController {
         ordersViewModel
             .orderDetailSubject
             .sink { order in
-                self.navigationController?.show(OrderDetailsViewController(order: order), sender: .none)
+                self.navigationController?.pushViewController(OrderDetailsViewController(order: order), animated: true)
             }
             .store(in: &ordersCallables)
     }
@@ -88,7 +88,6 @@ class OrdersViewController: CartViewController {
             ordersViewModel.isButtonPDFHidden = true
         case 2:
             ordersViewModel.getUserOrdersCompleted()
-            ordersViewModel.isButtonPDFHidden = false
         default:
             break
         }

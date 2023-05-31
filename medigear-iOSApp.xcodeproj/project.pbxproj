@@ -10,6 +10,10 @@
 		4B01018D29E7064200CE418A /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01018C29E7064200CE418A /* ProductListViewController.swift */; };
 		4B01018F29E7065500CE418A /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01018E29E7065500CE418A /* ProductListView.swift */; };
 		4B0BAA8229F75BC2005F943B /* APIPostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0BAA8129F75BC2005F943B /* APIPostData.swift */; };
+		4B1FC8CC2A115C520033D627 /* UpdateUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FC8CB2A115C520033D627 /* UpdateUserInfoViewController.swift */; };
+		4B1FC8CE2A115E990033D627 /* UpdateUserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FC8CD2A115E990033D627 /* UpdateUserInfoView.swift */; };
+		4B1FC8D02A11B46C0033D627 /* RestPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FC8CF2A11B46C0033D627 /* RestPasswordViewController.swift */; };
+		4B1FC8D32A11B4D90033D627 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FC8D22A11B4D90033D627 /* ResetPasswordView.swift */; };
 		4B21028329BA136400E18DF1 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B21028229BA136400E18DF1 /* SignIn.swift */; };
 		4B211EC329C21F8600B59F7D /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC229C21F8600B59F7D /* SignUp.swift */; };
 		4B211EC529C2263300B59F7D /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B211EC429C2263300B59F7D /* FormTextField.swift */; };
@@ -47,6 +51,10 @@
 		4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543829C36B81003CB934 /* UserLogin.swift */; };
 		4B8F543B29C36C22003CB934 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543A29C36C22003CB934 /* SignInService.swift */; };
 		4B8F543F29C3B294003CB934 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F543E29C3B294003CB934 /* LogInViewModel.swift */; };
+		4B9D25992A11415500D10A90 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D25982A11415500D10A90 /* UserView.swift */; };
+		4B9D259B2A11423500D10A90 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D259A2A11423500D10A90 /* UserService.swift */; };
+		4B9D259D2A11440B00D10A90 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D259C2A11440B00D10A90 /* UserViewModel.swift */; };
+		4B9D259F2A114D0B00D10A90 /* InfoField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D259E2A114D0B00D10A90 /* InfoField.swift */; };
 		4BA2D1FF29EAD7A3008032A6 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2D1FE29EAD7A3008032A6 /* Cart.swift */; };
 		4BC6349C29B9321E0046C2E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6349B29B9321E0046C2E0 /* AppDelegate.swift */; };
 		4BC6349E29B9321E0046C2E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6349D29B9321E0046C2E0 /* SceneDelegate.swift */; };
@@ -77,6 +85,10 @@
 		4B01018C29E7064200CE418A /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		4B01018E29E7065500CE418A /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		4B0BAA8129F75BC2005F943B /* APIPostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPostData.swift; sourceTree = "<group>"; };
+		4B1FC8CB2A115C520033D627 /* UpdateUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoViewController.swift; sourceTree = "<group>"; };
+		4B1FC8CD2A115E990033D627 /* UpdateUserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoView.swift; sourceTree = "<group>"; };
+		4B1FC8CF2A11B46C0033D627 /* RestPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestPasswordViewController.swift; sourceTree = "<group>"; };
+		4B1FC8D22A11B4D90033D627 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		4B21028229BA136400E18DF1 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		4B211EC229C21F8600B59F7D /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		4B211EC429C2263300B59F7D /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
@@ -111,6 +123,10 @@
 		4B8F543829C36B81003CB934 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		4B8F543A29C36C22003CB934 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		4B8F543E29C3B294003CB934 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		4B9D25982A11415500D10A90 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		4B9D259A2A11423500D10A90 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		4B9D259C2A11440B00D10A90 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		4B9D259E2A114D0B00D10A90 /* InfoField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoField.swift; sourceTree = "<group>"; };
 		4BA2D1FE29EAD7A3008032A6 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		4BC6349829B9321E0046C2E0 /* medigear-iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "medigear-iOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC6349B29B9321E0046C2E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +219,7 @@
 			children = (
 				4B211EC429C2263300B59F7D /* FormTextField.swift */,
 				4BDBCFA329CA82F200293D8B /* SecureCustomTexField.swift */,
+				4B9D259E2A114D0B00D10A90 /* InfoField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -318,6 +335,8 @@
 		4B4224AE29D25130009A2CF4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4B9D25952A113F8100D10A90 /* ViewModel */,
+				4B9D25932A113F7500D10A90 /* View */,
 				4B4224AF29D25153009A2CF4 /* ViewController */,
 			);
 			path = Profile;
@@ -327,6 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				4B4224B029D25162009A2CF4 /* ProfileViewController.swift */,
+				4B1FC8CB2A115C520033D627 /* UpdateUserInfoViewController.swift */,
+				4B1FC8CF2A11B46C0033D627 /* RestPasswordViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -411,6 +432,24 @@
 				4B23F40029CD04F50088DCE6 /* ErrorResponse.swift */,
 			);
 			path = AuthAPIResponse;
+			sourceTree = "<group>";
+		};
+		4B9D25932A113F7500D10A90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B9D25982A11415500D10A90 /* UserView.swift */,
+				4B1FC8CD2A115E990033D627 /* UpdateUserInfoView.swift */,
+				4B1FC8D22A11B4D90033D627 /* ResetPasswordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B9D25952A113F8100D10A90 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B9D259C2A11440B00D10A90 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4BA2D1F929EAD707008032A6 /* Cart */ = {
@@ -536,6 +575,7 @@
 				4B34891629E4706100188216 /* ProductService.swift */,
 				4B4E5DF629EDAAC000DF76ED /* CartService.swift */,
 				4B3738B82A0D9AA700BBCC39 /* OrderService.swift */,
+				4B9D259A2A11423500D10A90 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -700,7 +740,9 @@
 				4BF5946529D39AD40095BDE4 /* MedicalMinistrationService.swift in Sources */,
 				4B0BAA8229F75BC2005F943B /* APIPostData.swift in Sources */,
 				4BF5946929D39E840095BDE4 /* MedicalMinistrationViewModel.swift in Sources */,
+				4B9D259F2A114D0B00D10A90 /* InfoField.swift in Sources */,
 				4B8F543929C36B81003CB934 /* UserLogin.swift in Sources */,
+				4B9D25992A11415500D10A90 /* UserView.swift in Sources */,
 				4BF03ECE29E74F87005C9B91 /* SingleProductView.swift in Sources */,
 				4B79ED1A29D4A69800FF97C9 /* MedicalMinistration.swift in Sources */,
 				4B2C758729F2F5740045680D /* CartViewIconsController.swift in Sources */,
@@ -714,10 +756,13 @@
 				4BF03ED329E769F6005C9B91 /* SingleProductViewModel.swift in Sources */,
 				4BC634C629B96D4B0046C2E0 /* SignUpService.swift in Sources */,
 				4B3738BE2A0DA21500BBCC39 /* OrdersView.swift in Sources */,
+				4B9D259B2A11423500D10A90 /* UserService.swift in Sources */,
 				4B8120F029D2386A0087E78F /* HomeViewController.swift in Sources */,
+				4B9D259D2A11440B00D10A90 /* UserViewModel.swift in Sources */,
 				4B3D34A729F05CAD00D54DA5 /* OrderResponse.swift in Sources */,
 				4B211EC329C21F8600B59F7D /* SignUp.swift in Sources */,
 				4B2C759029F2FF6D0045680D /* CartView.swift in Sources */,
+				4B1FC8CE2A115E990033D627 /* UpdateUserInfoView.swift in Sources */,
 				4B8F543B29C36C22003CB934 /* SignInService.swift in Sources */,
 				4BC6349C29B9321E0046C2E0 /* AppDelegate.swift in Sources */,
 				4B6E5EA529BF8EAD00A3B26F /* SignUpViewController.swift in Sources */,
@@ -728,7 +773,9 @@
 				4BDBCFA429CA82F200293D8B /* SecureCustomTexField.swift in Sources */,
 				4BCB50B92A0EF6E500C1EDAB /* PDFOrderViewController.swift in Sources */,
 				4B3738C02A0DBD9500BBCC39 /* OrderDetailsViewController.swift in Sources */,
+				4B1FC8D02A11B46C0033D627 /* RestPasswordViewController.swift in Sources */,
 				4BC634CA29B96EAA0046C2E0 /* User.swift in Sources */,
+				4B1FC8D32A11B4D90033D627 /* ResetPasswordView.swift in Sources */,
 				4B34891A29E4727D00188216 /* SearchBarViewModel.swift in Sources */,
 				4B3D34A929F0861500D54DA5 /* CartViewModel.swift in Sources */,
 				4B211EC529C2263300B59F7D /* FormTextField.swift in Sources */,
@@ -748,6 +795,7 @@
 				4B2C758A29F2FBB80045680D /* PurchaseViewController.swift in Sources */,
 				4B3738B92A0D9AA700BBCC39 /* OrderService.swift in Sources */,
 				4BC634C429B957CB0046C2E0 /* NetworkProvider.swift in Sources */,
+				4B1FC8CC2A115C520033D627 /* UpdateUserInfoViewController.swift in Sources */,
 				4B3738C22A0DBF0200BBCC39 /* OrderDetailView.swift in Sources */,
 				4B80004A29E5B66E0055821D /* SearchResultViewController.swift in Sources */,
 				4BF03ED029E769CA005C9B91 /* SingleProductViewController.swift in Sources */,

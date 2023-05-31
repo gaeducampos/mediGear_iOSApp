@@ -25,26 +25,19 @@ final class CartViewModel: ObservableObject {
     
     @Published var total = 0.00
     
-
+    
     func appendToCart(cartProduct: CartProduct) {
-        let cartData = UserDefaults.standard.data(forKey: "cart")
-        guard let cartData = cartData else { return }
+        let cartData = UserDefaults.standard.data(forKey: "cart") ?? Data()
         
-        var cart = try? JSONDecoder().decode([CartProduct].self, from: cartData)
-        cart?.append(cartProduct)
+        var cart = (try? JSONDecoder().decode([CartProduct].self, from: cartData)) ?? []
+        cart.append(cartProduct)
         let encodedData = try? JSONEncoder().encode(cart)
         UserDefaults.standard.set(encodedData, forKey: "cart")
     }
     
     func getCart() -> [CartProduct] {
-        let emptyCart: [CartProduct] = []
-        
-        let cartData = UserDefaults.standard.data(forKey: "cart")
-        guard let cartData = cartData else { return emptyCart}
-        
-        let cart = try? JSONDecoder().decode([CartProduct].self, from: cartData)
-        guard let cart = cart else {return emptyCart}
-        return cart
+        let cartData = UserDefaults.standard.data(forKey: "cart") ?? Data()
+        return (try? JSONDecoder().decode([CartProduct].self, from: cartData)) ?? []
     }
     
     func getTotal() {
@@ -82,7 +75,29 @@ final class CartViewModel: ObservableObject {
             let encodedCartData = try? JSONEncoder().encode(cart)
             UserDefaults.standard.set(encodedCartData, forKey: "cart")
         }
+        
     }
+    
+    func deleteUserData() {
+        if let userData = UserDefaults.standard.object(forKey: "userInfo") as? Data {
+            let userSession = try? JSONDecoder().decode(Session.self, from: userData)
+            guard var userSession = userSession else {return}
+            
+            userSession = Session(jwt: "", user: User(id: -1,
+                                                      username: "",
+                                                      email: "",
+                                                      provider: "",
+                                                      confirmed: false,
+                                                      blocked: false,
+                                                      createdAt: "",
+                                                      updatedAt: "",
+                                                      fullName: ""))
+            
+            let encondedUserData = try? JSONEncoder().encode(userSession)
+            UserDefaults.standard.set(encondedUserData, forKey: "userInfo")
+        }
+    }
+    
     
     func getUserId() -> Int {
         if let userData = UserDefaults.standard.object(forKey: "userInfo") as? Data {
@@ -93,8 +108,18 @@ final class CartViewModel: ObservableObject {
             return 0
         }
     }
-
-
+    
+    func getUser() -> User? {
+        if let userData = UserDefaults.standard.object(forKey: "userInfo") as? Data {
+            let userSession = try? JSONDecoder().decode(Session.self, from: userData)
+            guard let userSession = userSession else {return nil}
+            return userSession.user
+        } else {
+            return nil
+        }
+    }
+    
+    
     func createOrder(total: Double, location: String, deliveryTime: String) {
         let cartData = UserDefaults.standard.data(forKey: "cart")
         guard let cartData = cartData else { return }
@@ -119,14 +144,14 @@ final class CartViewModel: ObservableObject {
         orderCancellable =  Publishers.MergeMany(orderDetailsProcess)
             .collect()
             .flatMap { [weak self, service] response -> AnyPublisher<APIPostData<OrderResponse>, Error> in
-
+                
                 let orderDetails = response.map { order in
                     return "\(order.data.id)"
                 }
                 
                 guard let userId = self?.getUserId() else {
-                        let error = NSError(domain: "mediGear.ios.App", code: -1,
-                                            userInfo: [NSLocalizedDescriptionKey: "User ID is missing"])
+                    let error = NSError(domain: "mediGear.ios.App", code: -1,
+                                        userInfo: [NSLocalizedDescriptionKey: "User ID is missing"])
                     return Fail(error: error).eraseToAnyPublisher()
                 }
                 
@@ -157,5 +182,6 @@ final class CartViewModel: ObservableObject {
                 }
             }
     }
+    
     
 }

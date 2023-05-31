@@ -21,7 +21,7 @@ class SingleProductViewController: CartViewController {
     
     init(product: Product) {
         self.product = product
-        super.init(nibName: nil, bundle: nil)
+        super.init(isResetPasswordVCPresented: false)
         
         
     }

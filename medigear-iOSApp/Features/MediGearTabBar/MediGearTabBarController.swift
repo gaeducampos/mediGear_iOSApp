@@ -21,9 +21,9 @@ class MediGearTabBarController: UITabBarController {
         tabBar.backgroundColor  = .systemBackground
         tabBar.overrideUserInterfaceStyle = .light
         
-        let homeViewController = UINavigationController(rootViewController: HomeViewController())
-        let orderViewController = OrdersViewController()
-        let profileViewController = UINavigationController(rootViewController: ProfileViewController()) 
+        let homeViewController = UINavigationController(rootViewController: HomeViewController(isResetPasswordVCPresented: false))
+        let orderViewController = UINavigationController(rootViewController: OrdersViewController(isResetPasswordVCPresented: false))
+        let profileViewController = UINavigationController(rootViewController: ProfileViewController(isResetPasswordVCPresented: false))
         
         homeViewController.tabBarItem = UITabBarItem(
             title: "Inicio",

@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class OrderDetailsViewController: UINavigationController {
+class OrderDetailsViewController: UIViewController {
     let order: Order
     
     lazy var orderDetailsUIHostinController: UIHostingController  = {
