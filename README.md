@@ -1,3 +1,3 @@
-# 🧑🏻‍💻 MediGear iOS: App de iOS utilizando custom REST API proporcionada por Strapi
+# 🧑🏻‍💻 MediGear iOS: iOS app that uses a REST API made in Strapi
 
-guía detallada de como utilizar el app en el siguiente [link](https://gabriels-organization-12.gitbook.io/medigear-ios-app/).
+step by step guide of its usage in the following URL: [link](https://gabriels-organization-12.gitbook.io/medigear-ios-app/).
